@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Billesh Bhai - Official YouTube channel. Funny Shorts, Cat Videos, Memes & Future Business Content. Legendary 3D Experience">
+  <meta name="keywords" content="Billesh Bhai, funny shorts, cat videos, memes, business content, youtube channel">
+  <title>Billesh Bhai | Legendary 8K 3D Experience</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(ellipse at center, #0a0a2a 0%, #000000 100%);
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* 8K Ultra HD Particle Background */
+    #canvas-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Falling Social Icons Canvas */
+    #falling-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 2;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* 3D Glassmorphism Ultra HD */
+    .glass-3d {
+      background: rgba(10, 20, 40, 0.45);
+      backdrop-filter: blur(20px);
+      border-radius: 2rem;
+      border: 1px solid rgba(0, 255, 255, 0.4);
+      box-shadow: 0 30px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,255,255,0.1) inset, 0 0 40px rgba(0,255,255,0.1);
+      transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      transform-style: preserve-3d;
+    }
+
+    .glass-3d:hover {
+      transform: translateY(-10px) rotateX(2deg) scale(1.02);
+      border-color: rgba(0, 255, 255, 0.8);
+      box-shadow: 0 40px 70px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,255,255,0.3) inset, 0 0 60px rgba(0,255,255,0.2);
+    }
+
+    /* Sticky 3D Navbar - Legendary */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 10, 25, 0.85);
+      backdrop-filter: blur(25px);
+      border-bottom: 2px solid rgba(0, 255, 255, 0.6);
+      padding: 1.2rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 20px rgba(0,255,255,0.2);
+      transform-style: preserve-3d;
+    }
+
+    .logo {
+      font-size: 2.2rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #fff, #0ff, #ff0066, #ffcc00);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.5px;
+      text-shadow: 0 0 20px rgba(0,255,255,0.5);
+      animation: logoGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes logoGlow {
+      0%, 100% { filter: brightness(1); }
+      50% { filter: brightness(1.2); text-shadow: 0 0 30px cyan; }
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: 0.3s;
+      position: relative;
+    }
+    .nav-links a::before {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, #0ff, #ff0066);
+      transition: 0.4s;
+    }
+    .nav-links a:hover::before {
+      width: 100%;
+    }
+    .nav-links a:hover {
+      color: #0ff;
+      text-shadow: 0 0 12px cyan;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section - 3D Cinematic */
+    .hero {
+      min-height: 95vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      perspective: 1200px;
+    }
+    .hero-content {
+      transform-style: preserve-3d;
+      animation: floatLegend 4s ease-in-out infinite;
+    }
+    @keyframes floatLegend {
+      0%, 100% { transform: translateY(0px) rotateX(0deg) rotateY(0deg); }
+      50% { transform: translateY(-20px) rotateX(3deg) rotateY(2deg); }
+    }
+    .hero-badge {
+      background: rgba(0, 255, 255, 0.2);
+      border-radius: 50px;
+      padding: 0.7rem 1.8rem;
+      display: inline-block;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(0,255,255,0.6);
+      font-weight: 600;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+    }
+    h1 {
+      font-size: 7rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #ffffff, #0ff, #ff0066, #ffcc00);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 1rem 0;
+      text-shadow: 0 0 50px rgba(0,255,255,0.4);
+      letter-spacing: -2px;
+    }
+    .tagline {
+      font-size: 1.8rem;
+      color: rgba(255,255,255,0.9);
+      margin: 1rem 0;
+      font-weight: 500;
+      text-shadow: 0 0 20px rgba(0,255,255,0.3);
+    }
+    .subscribe-btn {
+      background: linear-gradient(135deg, #ff3131, #ff0066, #ff6600);
+      border: none;
+      padding: 1.2rem 3.5rem;
+      font-weight: bold;
+      border-radius: 60px;
+      color: white;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: all 0.4s;
+      margin-top: 2.5rem;
+      box-shadow: 0 15px 40px rgba(255,0,0,0.4);
+      position: relative;
+      overflow: hidden;
+    }
+    .subscribe-btn::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+      transform: rotate(25deg);
+      transition: 0.5s;
+      opacity: 0;
+    }
+    .subscribe-btn:hover::after {
+      opacity: 1;
+      left: -30%;
+    }
+    .subscribe-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 50px rgba(255,0,100,0.8);
+    }
+
+    section {
+      margin: 7rem 0;
+    }
+    h2 {
+      font-size: 3.2rem;
+      margin-bottom: 2.8rem;
+      background: linear-gradient(135deg, #fff, #0ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      border-left: 6px solid #0ff;
+      padding-left: 1.8rem;
+      text-shadow: 0 0 10px rgba(0,255,255,0.3);
+    }
+
+    /* Info Grid - 3D Cards */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+    }
+    .info-card {
+      padding: 2.5rem;
+      text-align: center;
+      transform-style: preserve-3d;
+    }
+    .info-icon {
+      font-size: 4rem;
+      margin-bottom: 1.2rem;
+      filter: drop-shadow(0 0 15px rgba(0,255,255,0.5));
+    }
+    .info-card h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #0ff, #fff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .info-card p {
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    /* Business Section - Legendary */
+    .business-card {
+      padding: 3rem;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(0,20,40,0.6), rgba(10,10,30,0.6));
+    }
+    .email-legend {
+      background: linear-gradient(135deg, rgba(0,255,255,0.15), rgba(255,0,100,0.1));
+      padding: 1.5rem 2.5rem;
+      border-radius: 1.5rem;
+      text-align: center;
+      font-size: 1.4rem;
+      margin: 2rem auto;
+      border: 2px solid rgba(0,255,255,0.5);
+      display: inline-block;
+      backdrop-filter: blur(10px);
+    }
+    .email-legend a {
+      color: #0ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.6rem;
+      transition: 0.3s;
+    }
+    .email-legend a:hover {
+      text-shadow: 0 0 20px cyan;
+      letter-spacing: 1px;
+    }
+
+    /* Social Links - 3D Glowing */
+    .social-section {
+      margin-top: 2rem;
+    }
+    .social-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .social-link-card {
+      padding: 1.5rem 2.5rem;
+      text-align: center;
+      min-width: 200px;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    .social-link-card:hover {
+      transform: translateY(-8px) scale(1.05);
+    }
+    .social-icon-large {
+      font-size: 3.5rem;
+      margin-bottom: 0.8rem;
+      display: inline-block;
+    }
+    .social-link-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .social-link-card p {
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+    .social-link-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    /* Stats Section */
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .stat-item {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+      padding: 2rem;
+    }
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #0ff;
+      text-shadow: 0 0 20px cyan;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem;
+      border-top: 2px solid rgba(0, 255, 255, 0.4);
+      margin-top: 5rem;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 1.2rem; }
+      h1 { font-size: 3rem; }
+      .tagline { font-size: 1.2rem; }
+      h2 { font-size: 2rem; }
+      .navbar { flex-direction: column; gap: 1rem; }
+      .nav-links { gap: 1.5rem; }
+      .email-legend a { font-size: 1rem; }
+    }
+
+    /* Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(60px) rotateX(10deg);
+      transition: all 0.9s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0) rotateX(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- 8K Particle Background -->
+<canvas id="canvas-bg"></canvas>
+<!-- Falling Social Icons Canvas -->
+<canvas id="falling-canvas"></canvas>
+
+<div class="content-wrapper">
+  <nav class="navbar">
+    <div class="logo">🇮🇳 BILLESH BHAI</div>
+    <div class="nav-links">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#business">BUSINESS</a>
+      <a href="#social">SOCIAL</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">✨ OFFICIAL 8K 3D EXPERIENCE ✨</div>
+        <h1>Billesh Bhai</h1>
+        <div class="tagline">Funny Shorts | Cat Videos | Memes | Future Business</div>
+        <button class="subscribe-btn" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
+          🎬 SUBSCRIBE NOW
+        </button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container reveal">
+      <h2>📌 LEGENDARY STATUS</h2>
+      <div class="glass-3d" style="padding: 2.8rem;">
+        <p style="font-size: 1.4rem; line-height: 1.7; margin-bottom: 1.8rem; text-align: center;">
+          <strong>BILLESH BHAI</strong> — The ultimate destination for daily laughter, hilarious funny shorts, 
+          adorable cat moments, and viral meme edits. Currently ruling the entertainment space, 
+          with a massive expansion into <strong style="color:#0ff">BUSINESS & MOTIVATIONAL CONTENT</strong> coming soon.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin-top: 1.5rem;">
+          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">🎭 Funny Shorts</span>
+          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">🐱 Cat Videos</span>
+          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">🎨 Meme Edits</span>
+          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">📈 Future Business Content</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="container reveal">
+      <h2>⚡ 3D ULTRA HD FEATURES</h2>
+      <div class="info-grid">
+        <div class="glass-3d info-card">
+          <div class="info-icon">🎯</div>
+          <h3>Funny Shorts</h3>
+          <p>Daily dose of premium comedy sketches that keep you hooked</p>
+        </div>
+        <div class="glass-3d info-card">
+          <div class="info-icon">🐈</div>
+          <h3>Cat Content</h3>
+          <p>Next-level adorable and hilarious cat moments</p>
+        </div>
+        <div class="glass-3d info-card">
+          <div class="info-icon">🚀</div>
+          <h3>Business Expansion</h3>
+          <p>Coming soon: Motivational & business growth content</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Collaboration Section -->
+    <section id="business" class="container reveal">
+      <h2>💼 BUSINESS & COLLABORATIONS</h2>
+      <div class="glass-3d business-card">
+        <p style="font-size: 1.3rem; margin-bottom: 1.8rem;">
+          📢 Ready for brand collaborations, sponsorships, or partnerships?<br>
+          Connect directly for all business inquiries.
+        </p>
+        <div class="email-legend">
+          📧 <strong>BUSINESS CONTACT</strong><br>
+          <a href="mailto:zlxyoutuber@gmail.com">zlxyoutuber@gmail.com</a>
+        </div>
+        <p style="margin-top: 1.8rem; color: #aaa; font-size: 1rem;">
+          For brand deals, promotions, or collaboration opportunities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social" class="container reveal">
+      <h2>🌐 CONNECT WITH BILLESH BHAI</h2>
+      <div class="social-grid">
+        <div class="glass-3d social-link-card" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
+          <div class="social-icon-large">▶️</div>
+          <h3>YouTube</h3>
+          <p>@billeshbhai</p>
+          <p style="font-size:0.75rem; color:#0ff;">Subscribe Now →</p>
+        </div>
+        <div class="glass-3d social-link-card" onclick="window.open('https://www.instagram.com/billeshbhaiofficial/', '_blank')">
+          <div class="social-icon-large">📸</div>
+          <h3>Instagram</h3>
+          <p>@billeshbhaiofficial</p>
+          <p style="font-size:0.75rem; color:#0ff;">Follow →</p>
+        </div>
+        <div class="glass-3d social-link-card" onclick="window.open('https://x.com/itzzlx', '_blank')">
+          <div class="social-icon-large">𝕏</div>
+          <h3>X (Twitter)</h3>
+          <p>@itzzlx</p>
+          <p style="font-size:0.75rem; color:#0ff;">Follow →</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D Stats Section -->
+    <section class="container reveal">
+      <h2>🌟 8K VISION</h2>
+      <div class="glass-3d stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">1M+</div>
+          <p>Monthly Views</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">500K+</div>
+          <p>Community Reach</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100+</div>
+          <p>Viral Shorts</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 BILLESH BHAI — Legendary YouTube Channel</p>
+    <p style="margin: 0.8rem 0; font-size: 0.95rem; color: #88aaff;">Funny Shorts | Cat Videos | Memes | Future Business Content</p>
+    <div style="margin-top: 1rem;">
+      <p style="font-size:0.85rem;">📺 YouTube | 📸 Instagram | 𝕏 Twitter</p>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // 8K Particle Background Animation
+  const canvas = document.getElementById('canvas-bg');
+  const ctx = canvas.getContext('2d');
+  
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  const particles = [];
+  const particleCount = 180;
+
+  for (let i = 0; i < particleCount; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 2 + 0.5,
+      speedX: (Math.random() - 0.5) * 0.5,
+      speedY: (Math.random() - 0.5) * 0.3,
+      alpha: Math.random() * 0.5 + 0.2,
+      color: `hsl(${Math.random() * 60 + 180}, 100%, 60%)`
+    });
+  }
+
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    for (let p of particles) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.shadowBlur = 5;
+      ctx.shadowColor = '#0ff';
+      ctx.fill();
+      
+      p.x += p.speedX;
+      p.y += p.speedY;
+      
+      if (p.x < 0) p.x = canvas.width;
+      if (p.x > canvas.width) p.x = 0;
+      if (p.y < 0) p.y = canvas.height;
+      if (p.y > canvas.height) p.y = 0;
+    }
+    
+    requestAnimationFrame(animateParticles);
+  }
+  
+  animateParticles();
+
+  // Falling Social Icons Animation (YouTube, Instagram, X logos falling like snow)
+  const fallingCanvas = document.getElementById('falling-canvas');
+  const fallingCtx = fallingCanvas.getContext('2d');
+  
+  function resizeFallingCanvas() {
+    fallingCanvas.width = window.innerWidth;
+    fallingCanvas.height = window.innerHeight;
+  }
+  resizeFallingCanvas();
+  window.addEventListener('resize', resizeFallingCanvas);
+
+  const icons = ['▶️', '📸', '𝕏'];
+  const fallingIcons = [];
+
+  for (let i = 0; i < 60; i++) {
+    fallingIcons.push({
+      x: Math.random() * fallingCanvas.width,
+      y: Math.random() * fallingCanvas.height,
+      size: Math.random() * 24 + 16,
+      speed: Math.random() * 1.5 + 0.8,
+      icon: icons[Math.floor(Math.random() * icons.length)],
+      rotation: Math.random() * 360,
+      opacity: Math.random() * 0.4 + 0.2
+    });
+  }
+
+  function animateFalling() {
+    fallingCtx.clearRect(0, 0, fallingCanvas.width, fallingCanvas.height);
+    
+    for (let obj of fallingIcons) {
+      fallingCtx.save();
+      fallingCtx.font = `${obj.size}px "Segoe UI Emoji", "Apple Color Emoji", sans-serif`;
+      fallingCtx.shadowBlur = 8;
+      fallingCtx.shadowColor = '#0ff';
+      fallingCtx.globalAlpha = obj.opacity;
+      fallingCtx.translate(obj.x + obj.size/2, obj.y + obj.size/2);
+      fallingCtx.rotate(obj.rotation * Math.PI / 180);
+      fallingCtx.fillStyle = obj.icon === '▶️' ? '#ff0000' : (obj.icon === '📸' ? '#ff0066' : '#ffffff');
+      fallingCtx.fillText(obj.icon, -obj.size/2, -obj.size/2);
+      fallingCtx.restore();
+      
+      obj.y += obj.speed;
+      obj.rotation += 1.5;
+      
+      if (obj.y > fallingCanvas.height) {
+        obj.y = -obj.size;
+        obj.x = Math.random() * fallingCanvas.width;
+      }
+    }
+    
+    requestAnimationFrame(animateFalling);
+  }
+  
+  animateFalling();
+
+  // Scroll Reveal Animation
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  reveals.forEach(el => observer.observe(el));
+
+  // Smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // 3D Mouse Parallax Effect on Hero
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 15;
+      hero.style.transform = `perspective(1200px) rotateY(${x * 0.03}deg) rotateX(${y * -0.02}deg)`;
+    });
+  }
+
+  // Add 3D tilt to cards
+  const cards = document.querySelectorAll('.glass-3d');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = (y - centerY) / 20;
+      const rotateY = (centerX - x) / 20;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+    });
+  });
+</script>
+</body>
+</html>
