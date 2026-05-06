@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Billesh Bhai - Official YouTube channel. Funny Shorts, Cat Videos, Memes & Future Business Content. Legendary 3D Experience">
   <meta name="keywords" content="Billesh Bhai, funny shorts, cat videos, memes, business content, youtube channel">
-  <title>Billesh Bhai | Legendary 8K 3D Experience</title>
+  <title>BILLESH BHAI | LEGENDARY 8K 3D EXPERIENCE</title>
+  
+  <!-- FAVICON - Extreme Legendary Crown Icon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300ffff'/%3E%3Cstop offset='50%25' stop-color='%23ff0066'/%3E%3Cstop offset='100%25' stop-color='%23ffcc00'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='%230a0a2a'/%3E%3Ctext x='50' y='72' font-size='70' text-anchor='middle' fill='url(%23grad)' font-family='Arial'%3E👑%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a2a'/%3E%3Ctext x='50' y='72' font-size='70' text-anchor='middle' fill='%2300ffff'%3E👑%3C/text%3E%3C/svg%3E">
   
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
@@ -35,7 +39,7 @@
       pointer-events: none;
     }
 
-    /* Falling Social Icons Canvas */
+    /* Falling Legendary Icons Canvas */
     #falling-canvas {
       position: fixed;
       top: 0;
@@ -57,7 +61,7 @@
       padding: 0 2rem;
     }
 
-    /* 3D Glassmorphism Ultra HD */
+    /* 3D Glassmorphism Ultra HD - LEGENDARY */
     .glass-3d {
       background: rgba(10, 20, 40, 0.45);
       backdrop-filter: blur(20px);
@@ -82,7 +86,7 @@
       background: rgba(5, 10, 25, 0.85);
       backdrop-filter: blur(25px);
       border-bottom: 2px solid rgba(0, 255, 255, 0.6);
-      padding: 1.2rem 2rem;
+      padding: 1rem 2rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -91,8 +95,30 @@
       transform-style: preserve-3d;
     }
 
-    .logo {
-      font-size: 2.2rem;
+    /* Legendary Logo Container */
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .logo-wrapper:hover {
+      transform: scale(1.02);
+      filter: drop-shadow(0 0 15px rgba(0,255,255,0.8));
+    }
+    .logo-icon {
+      font-size: 2.8rem;
+      filter: drop-shadow(0 0 8px cyan);
+      transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      animation: iconSpin 8s infinite linear;
+    }
+    @keyframes iconSpin {
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
+    }
+    .logo-text {
+      font-size: 2rem;
       font-weight: 900;
       background: linear-gradient(135deg, #fff, #0ff, #ff0066, #ffcc00);
       -webkit-background-clip: text;
@@ -102,10 +128,9 @@
       text-shadow: 0 0 20px rgba(0,255,255,0.5);
       animation: logoGlow 3s ease-in-out infinite;
     }
-
     @keyframes logoGlow {
-      0%, 100% { filter: brightness(1); }
-      50% { filter: brightness(1.2); text-shadow: 0 0 30px cyan; }
+      0%, 100% { filter: brightness(1); text-shadow: 0 0 10px cyan; }
+      50% { filter: brightness(1.2); text-shadow: 0 0 30px cyan, 0 0 10px #ff0066; }
     }
 
     .nav-links {
@@ -139,7 +164,7 @@
       transform: translateY(-2px);
     }
 
-    /* Hero Section - 3D Cinematic */
+    /* Hero Section - Extreme Legendary */
     .hero {
       min-height: 95vh;
       display: flex;
@@ -168,6 +193,21 @@
       font-weight: 600;
       letter-spacing: 2px;
       font-size: 0.9rem;
+    }
+    .hero-logo-3d {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .hero-crown-icon {
+      font-size: 5rem;
+      filter: drop-shadow(0 0 20px gold);
+      animation: crownPulse 2s infinite alternate;
+      display: inline-block;
+    }
+    @keyframes crownPulse {
+      0% { transform: scale(0.95); text-shadow: 0 0 5px gold;}
+      100% { transform: scale(1.1); text-shadow: 0 0 25px #ffaa00;}
     }
     h1 {
       font-size: 7rem;
@@ -238,7 +278,7 @@
       text-shadow: 0 0 10px rgba(0,255,255,0.3);
     }
 
-    /* Info Grid - 3D Cards */
+    /* Info Grid - Legendary Cards */
     .info-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -267,11 +307,26 @@
       color: #ddd;
     }
 
-    /* Business Section - Legendary */
+    /* Business Section - Extreme Legendary */
     .business-card {
       padding: 3rem;
       text-align: center;
       background: linear-gradient(135deg, rgba(0,20,40,0.6), rgba(10,10,30,0.6));
+      position: relative;
+    }
+    .business-icon-logo {
+      font-size: 3.5rem;
+      background: rgba(0,0,0,0.5);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem auto;
+      border: 2px solid cyan;
+      box-shadow: 0 0 25px cyan;
+      backdrop-filter: blur(5px);
     }
     .email-legend {
       background: linear-gradient(135deg, rgba(0,255,255,0.15), rgba(255,0,100,0.1));
@@ -296,7 +351,7 @@
       letter-spacing: 1px;
     }
 
-    /* Social Links - 3D Glowing */
+    /* Social Links - Legendary */
     .social-section {
       margin-top: 2rem;
     }
@@ -321,6 +376,7 @@
       font-size: 3.5rem;
       margin-bottom: 0.8rem;
       display: inline-block;
+      filter: drop-shadow(0 0 8px currentColor);
     }
     .social-link-card h3 {
       font-size: 1.3rem;
@@ -336,7 +392,7 @@
       display: block;
     }
 
-    /* Stats Section */
+    /* Stats Section - Legendary */
     .stats-grid {
       display: flex;
       flex-wrap: wrap;
@@ -356,6 +412,10 @@
       color: #0ff;
       text-shadow: 0 0 20px cyan;
     }
+    .stat-logo-emoji {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
 
     footer {
       text-align: center;
@@ -364,6 +424,12 @@
       margin-top: 5rem;
       background: rgba(0,0,0,0.4);
       backdrop-filter: blur(10px);
+    }
+    .footer-logo {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+      display: inline-block;
+      filter: drop-shadow(0 0 10px cyan);
     }
 
     @media (max-width: 768px) {
@@ -374,6 +440,8 @@
       .navbar { flex-direction: column; gap: 1rem; }
       .nav-links { gap: 1.5rem; }
       .email-legend a { font-size: 1rem; }
+      .logo-text { font-size: 1.4rem; }
+      .logo-icon { font-size: 2rem; }
     }
 
     /* Scroll Reveal */
@@ -386,18 +454,34 @@
       opacity: 1;
       transform: translateY(0) rotateX(0);
     }
+
+    /* Legendary Glow Text Effect */
+    .legendary-text {
+      background: linear-gradient(135deg, #ffcc00, #ff0066, #0ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: textShift 3s infinite;
+    }
+    @keyframes textShift {
+      0%, 100% { filter: hue-rotate(0deg); }
+      50% { filter: hue-rotate(15deg); }
+    }
   </style>
 </head>
 <body>
 
 <!-- 8K Particle Background -->
 <canvas id="canvas-bg"></canvas>
-<!-- Falling Social Icons Canvas -->
+<!-- Falling Legendary Icons Canvas -->
 <canvas id="falling-canvas"></canvas>
 
 <div class="content-wrapper">
   <nav class="navbar">
-    <div class="logo">🇮🇳 BILLESH BHAI</div>
+    <div class="logo-wrapper" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+      <div class="logo-icon">👑</div>
+      <div class="logo-text">BILLESH BHAI</div>
+    </div>
     <div class="nav-links">
       <a href="#home">HOME</a>
       <a href="#about">ABOUT</a>
@@ -407,68 +491,79 @@
   </nav>
 
   <main>
-    <!-- Hero Section -->
+    <!-- Hero Section - Extreme Legendary -->
     <section id="home" class="hero">
       <div class="hero-content">
-        <div class="hero-badge">✨ OFFICIAL 8K 3D EXPERIENCE ✨</div>
-        <h1>Billesh Bhai</h1>
-        <div class="tagline">Funny Shorts | Cat Videos | Memes | Future Business</div>
+        <div class="hero-logo-3d">
+          <span class="hero-crown-icon">👑</span>
+        </div>
+        <div class="hero-badge">LEGENDARY 8K 3D EXPERIENCE</div>
+        <h1>BILLESH BHAI</h1>
+        <div class="tagline">FUNNY SHORTS | CAT VIDEOS | MEMES | BUSINESS</div>
         <button class="subscribe-btn" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
-          🎬 SUBSCRIBE NOW
+          SUBSCRIBE NOW
         </button>
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section - Legendary -->
     <section id="about" class="container reveal">
-      <h2>📌 LEGENDARY STATUS</h2>
+      <h2>LEGENDARY STATUS</h2>
       <div class="glass-3d" style="padding: 2.8rem;">
+        <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
+          <div style="background: radial-gradient(circle, #0ff, #0055aa); border-radius: 50%; padding: 18px; box-shadow: 0 0 40px cyan; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.8rem;">
+            <span style="font-size: 4rem;">👑</span>
+          </div>
+        </div>
         <p style="font-size: 1.4rem; line-height: 1.7; margin-bottom: 1.8rem; text-align: center;">
-          <strong>BILLESH BHAI</strong> — The ultimate destination for daily laughter, hilarious funny shorts, 
+          <strong class="legendary-text">BILLESH BHAI</strong> — The ultimate destination for daily laughter, hilarious funny shorts, 
           adorable cat moments, and viral meme edits. Currently ruling the entertainment space, 
-          with a massive expansion into <strong style="color:#0ff">BUSINESS & MOTIVATIONAL CONTENT</strong> coming soon.
+          with a massive expansion into <strong style="color:#0ff">BUSINESS AND MOTIVATIONAL CONTENT</strong> coming soon.
         </p>
         <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin-top: 1.5rem;">
-          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">🎭 Funny Shorts</span>
-          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">🐱 Cat Videos</span>
-          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">🎨 Meme Edits</span>
-          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">📈 Future Business Content</span>
+          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">FUNNY SHORTS</span>
+          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">CAT VIDEOS</span>
+          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">MEME EDITS</span>
+          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">BUSINESS CONTENT</span>
         </div>
       </div>
     </section>
 
-    <!-- Features Grid -->
+    <!-- Features Grid - Legendary -->
     <section class="container reveal">
-      <h2>⚡ 3D ULTRA HD FEATURES</h2>
+      <h2>LEGENDARY FEATURES</h2>
       <div class="info-grid">
         <div class="glass-3d info-card">
           <div class="info-icon">🎯</div>
-          <h3>Funny Shorts</h3>
+          <h3>FUNNY SHORTS</h3>
           <p>Daily dose of premium comedy sketches that keep you hooked</p>
         </div>
         <div class="glass-3d info-card">
-          <div class="info-icon">🐈</div>
-          <h3>Cat Content</h3>
+          <div class="info-icon">🐱</div>
+          <h3>CAT CONTENT</h3>
           <p>Next-level adorable and hilarious cat moments</p>
         </div>
         <div class="glass-3d info-card">
           <div class="info-icon">🚀</div>
-          <h3>Business Expansion</h3>
-          <p>Coming soon: Motivational & business growth content</p>
+          <h3>BUSINESS EXPANSION</h3>
+          <p>Coming soon: Motivational and business growth content</p>
         </div>
       </div>
     </section>
 
-    <!-- Business Collaboration Section -->
+    <!-- Business Collaboration Section - Legendary -->
     <section id="business" class="container reveal">
-      <h2>💼 BUSINESS & COLLABORATIONS</h2>
+      <h2>BUSINESS AND COLLABORATIONS</h2>
       <div class="glass-3d business-card">
+        <div class="business-icon-logo">
+          <span style="font-size: 2.5rem;">💼</span>
+        </div>
         <p style="font-size: 1.3rem; margin-bottom: 1.8rem;">
-          📢 Ready for brand collaborations, sponsorships, or partnerships?<br>
+          Ready for brand collaborations, sponsorships, or partnerships?<br>
           Connect directly for all business inquiries.
         </p>
         <div class="email-legend">
-          📧 <strong>BUSINESS CONTACT</strong><br>
+          <strong>BUSINESS CONTACT</strong><br>
           <a href="mailto:zlxyoutuber@gmail.com">zlxyoutuber@gmail.com</a>
         </div>
         <p style="margin-top: 1.8rem; color: #aaa; font-size: 1rem;">
@@ -477,56 +572,60 @@
       </div>
     </section>
 
-    <!-- Social Media Section -->
+    <!-- Social Media Section - Legendary -->
     <section id="social" class="container reveal">
-      <h2>🌐 CONNECT WITH BILLESH BHAI</h2>
+      <h2>CONNECT WITH BILLESH BHAI</h2>
       <div class="social-grid">
         <div class="glass-3d social-link-card" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
           <div class="social-icon-large">▶️</div>
-          <h3>YouTube</h3>
+          <h3>YOUTUBE</h3>
           <p>@billeshbhai</p>
-          <p style="font-size:0.75rem; color:#0ff;">Subscribe Now →</p>
+          <p style="font-size:0.75rem; color:#0ff;">SUBSCRIBE NOW</p>
         </div>
         <div class="glass-3d social-link-card" onclick="window.open('https://www.instagram.com/billeshbhaiofficial/', '_blank')">
           <div class="social-icon-large">📸</div>
-          <h3>Instagram</h3>
+          <h3>INSTAGRAM</h3>
           <p>@billeshbhaiofficial</p>
-          <p style="font-size:0.75rem; color:#0ff;">Follow →</p>
+          <p style="font-size:0.75rem; color:#0ff;">FOLLOW NOW</p>
         </div>
         <div class="glass-3d social-link-card" onclick="window.open('https://x.com/itzzlx', '_blank')">
           <div class="social-icon-large">𝕏</div>
-          <h3>X (Twitter)</h3>
+          <h3>X TWITTER</h3>
           <p>@itzzlx</p>
-          <p style="font-size:0.75rem; color:#0ff;">Follow →</p>
+          <p style="font-size:0.75rem; color:#0ff;">FOLLOW NOW</p>
         </div>
       </div>
     </section>
 
-    <!-- 3D Stats Section -->
+    <!-- Stats Section - Legendary -->
     <section class="container reveal">
-      <h2>🌟 8K VISION</h2>
+      <h2>LEGENDARY STATS</h2>
       <div class="glass-3d stats-grid">
         <div class="stat-item">
+          <div class="stat-logo-emoji">📈</div>
           <div class="stat-number">1M+</div>
-          <p>Monthly Views</p>
+          <p>MONTHLY VIEWS</p>
         </div>
         <div class="stat-item">
+          <div class="stat-logo-emoji">🌍</div>
           <div class="stat-number">500K+</div>
-          <p>Community Reach</p>
+          <p>COMMUNITY REACH</p>
         </div>
         <div class="stat-item">
+          <div class="stat-logo-emoji">⚡</div>
           <div class="stat-number">100+</div>
-          <p>Viral Shorts</p>
+          <p>VIRAL SHORTS</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 BILLESH BHAI — Legendary YouTube Channel</p>
-    <p style="margin: 0.8rem 0; font-size: 0.95rem; color: #88aaff;">Funny Shorts | Cat Videos | Memes | Future Business Content</p>
+    <div class="footer-logo">👑 BILLESH BHAI 👑</div>
+    <p>2025 BILLESH BHAI — LEGENDARY YOUTUBE CHANNEL</p>
+    <p style="margin: 0.8rem 0; font-size: 0.95rem; color: #88aaff;">FUNNY SHORTS | CAT VIDEOS | MEMES | BUSINESS CONTENT</p>
     <div style="margin-top: 1rem;">
-      <p style="font-size:0.85rem;">📺 YouTube | 📸 Instagram | 𝕏 Twitter</p>
+      <p style="font-size:0.85rem;">YOUTUBE | INSTAGRAM | X TWITTER</p>
     </div>
   </footer>
 </div>
@@ -544,16 +643,16 @@
   window.addEventListener('resize', resizeCanvas);
 
   const particles = [];
-  const particleCount = 180;
+  const particleCount = 220;
 
   for (let i = 0; i < particleCount; i++) {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      radius: Math.random() * 2 + 0.5,
-      speedX: (Math.random() - 0.5) * 0.5,
-      speedY: (Math.random() - 0.5) * 0.3,
-      alpha: Math.random() * 0.5 + 0.2,
+      radius: Math.random() * 2.5 + 0.5,
+      speedX: (Math.random() - 0.5) * 0.6,
+      speedY: (Math.random() - 0.5) * 0.4,
+      alpha: Math.random() * 0.6 + 0.2,
       color: `hsl(${Math.random() * 60 + 180}, 100%, 60%)`
     });
   }
@@ -565,7 +664,7 @@
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
       ctx.fillStyle = p.color;
-      ctx.shadowBlur = 5;
+      ctx.shadowBlur = 6;
       ctx.shadowColor = '#0ff';
       ctx.fill();
       
@@ -583,7 +682,7 @@
   
   animateParticles();
 
-  // Falling Social Icons Animation (YouTube, Instagram, X logos falling like snow)
+  // Falling Legendary Icons Animation
   const fallingCanvas = document.getElementById('falling-canvas');
   const fallingCtx = fallingCanvas.getContext('2d');
   
@@ -594,18 +693,18 @@
   resizeFallingCanvas();
   window.addEventListener('resize', resizeFallingCanvas);
 
-  const icons = ['▶️', '📸', '𝕏'];
+  const icons = ['👑', '▶️', '📸', '𝕏', '🐱', '🎬'];
   const fallingIcons = [];
 
-  for (let i = 0; i < 60; i++) {
+  for (let i = 0; i < 80; i++) {
     fallingIcons.push({
       x: Math.random() * fallingCanvas.width,
       y: Math.random() * fallingCanvas.height,
-      size: Math.random() * 24 + 16,
-      speed: Math.random() * 1.5 + 0.8,
+      size: Math.random() * 28 + 16,
+      speed: Math.random() * 1.8 + 0.6,
       icon: icons[Math.floor(Math.random() * icons.length)],
       rotation: Math.random() * 360,
-      opacity: Math.random() * 0.4 + 0.2
+      opacity: Math.random() * 0.5 + 0.2
     });
   }
 
@@ -615,17 +714,23 @@
     for (let obj of fallingIcons) {
       fallingCtx.save();
       fallingCtx.font = `${obj.size}px "Segoe UI Emoji", "Apple Color Emoji", sans-serif`;
-      fallingCtx.shadowBlur = 8;
+      fallingCtx.shadowBlur = 10;
       fallingCtx.shadowColor = '#0ff';
       fallingCtx.globalAlpha = obj.opacity;
       fallingCtx.translate(obj.x + obj.size/2, obj.y + obj.size/2);
       fallingCtx.rotate(obj.rotation * Math.PI / 180);
-      fallingCtx.fillStyle = obj.icon === '▶️' ? '#ff0000' : (obj.icon === '📸' ? '#ff0066' : '#ffffff');
+      
+      if (obj.icon === '▶️') fallingCtx.fillStyle = '#ff0000';
+      else if (obj.icon === '📸') fallingCtx.fillStyle = '#ff0066';
+      else if (obj.icon === '𝕏') fallingCtx.fillStyle = '#ffffff';
+      else if (obj.icon === '👑') fallingCtx.fillStyle = '#ffcc00';
+      else fallingCtx.fillStyle = '#0ff';
+      
       fallingCtx.fillText(obj.icon, -obj.size/2, -obj.size/2);
       fallingCtx.restore();
       
       obj.y += obj.speed;
-      obj.rotation += 1.5;
+      obj.rotation += 2;
       
       if (obj.y > fallingCanvas.height) {
         obj.y = -obj.size;
