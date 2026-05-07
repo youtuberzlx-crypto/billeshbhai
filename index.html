@@ -3,795 +3,800 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Billesh Bhai - Official YouTube channel. Funny Shorts, Cat Videos, Memes & Future Business Content. Legendary 3D Experience">
-  <meta name="keywords" content="Billesh Bhai, funny shorts, cat videos, memes, business content, youtube channel">
-  <title>BILLESH BHAI | LEGENDARY 8K 3D EXPERIENCE</title>
+  <meta name="description" content="Billesh Bhai — Funny Shorts, Cat Videos, Memes & Business. The next generation creator brand.">
+  <meta name="theme-color" content="#000000">
+  <title>Billesh Bhai — Creator Brand</title>
   
-  <!-- FAVICON - Extreme Legendary Crown Icon -->
-  <link rel="icon" type="image/png" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300ffff'/%3E%3Cstop offset='50%25' stop-color='%23ff0066'/%3E%3Cstop offset='100%25' stop-color='%23ffcc00'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='%230a0a2a'/%3E%3Ctext x='50' y='72' font-size='70' text-anchor='middle' fill='url(%23grad)' font-family='Arial'%3E👑%3C/text%3E%3C/svg%3E">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a2a'/%3E%3Ctext x='50' y='72' font-size='70' text-anchor='middle' fill='%2300ffff'%3E👑%3C/text%3E%3C/svg%3E">
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
-
+    /* ---------- RESET & BASE ---------- */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(ellipse at center, #0a0a2a 0%, #000000 100%);
-      color: #fff;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #000000;
+      color: #e8e8ec;
+      line-height: 1.5;
       overflow-x: hidden;
-      position: relative;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* 8K Ultra HD Particle Background */
-    #canvas-bg {
+    /* ---------- BACKGROUND GRADIENT (subtle) ---------- */
+    .bg-gradient {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 0;
-      pointer-events: none;
+      z-index: -2;
+      background: radial-gradient(circle at 20% 30%, rgba(0, 20, 30, 0.4), #000000 80%);
     }
 
-    /* Falling Legendary Icons Canvas */
-    #falling-canvas {
+    /* Subtle animated gradient overlay */
+    .bg-ambient {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 1;
+      z-index: -1;
+      opacity: 0.3;
+      background: radial-gradient(circle at 40% 60%, rgba(0, 255, 255, 0.08), transparent 70%);
+      animation: ambientMove 20s ease infinite alternate;
       pointer-events: none;
     }
 
-    .content-wrapper {
-      position: relative;
-      z-index: 2;
+    @keyframes ambientMove {
+      0% { transform: translate(-5%, -5%) scale(1); opacity: 0.2; }
+      100% { transform: translate(5%, 5%) scale(1.2); opacity: 0.4; }
     }
 
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: clamp(3.5rem, 12vw, 7rem);
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .text-accent {
+      color: #00e5ff;
+    }
+
+    .text-subtle {
+      color: #8a8a8f;
+      font-size: 0.95rem;
+    }
+
+    /* ---------- LAYOUT CONTAINERS ---------- */
     .container {
-      max-width: 1400px;
+      max-width: 1280px;
       margin: 0 auto;
       padding: 0 2rem;
     }
 
-    /* 3D Glassmorphism Ultra HD - LEGENDARY */
-    .glass-3d {
-      background: rgba(10, 20, 40, 0.45);
-      backdrop-filter: blur(20px);
-      border-radius: 2rem;
-      border: 1px solid rgba(0, 255, 255, 0.4);
-      box-shadow: 0 30px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,255,255,0.1) inset, 0 0 40px rgba(0,255,255,0.1);
-      transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-      transform-style: preserve-3d;
+    section {
+      margin: 8rem 0;
     }
 
-    .glass-3d:hover {
-      transform: translateY(-10px) rotateX(2deg) scale(1.02);
-      border-color: rgba(0, 255, 255, 0.8);
-      box-shadow: 0 40px 70px rgba(0,0,0,0.6), 0 0 0 2px rgba(0,255,255,0.3) inset, 0 0 60px rgba(0,255,255,0.2);
-    }
-
-    /* Sticky 3D Navbar - Legendary */
+    /* ---------- PREMIUM NAVBAR ---------- */
     .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(5, 10, 25, 0.85);
-      backdrop-filter: blur(25px);
-      border-bottom: 2px solid rgba(0, 255, 255, 0.6);
-      padding: 1rem 2rem;
+      position: fixed;
+      top: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 1280px;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(16px);
+      border-radius: 2rem;
+      border: 0.5px solid rgba(0, 229, 255, 0.2);
+      padding: 0.9rem 2rem;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 20px rgba(0,255,255,0.2);
-      transform-style: preserve-3d;
+      transition: all 0.3s ease;
     }
 
-    /* Legendary Logo Container */
-    .logo-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-    .logo-wrapper:hover {
-      transform: scale(1.02);
-      filter: drop-shadow(0 0 15px rgba(0,255,255,0.8));
-    }
-    .logo-icon {
-      font-size: 2.8rem;
-      filter: drop-shadow(0 0 8px cyan);
-      transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-      animation: iconSpin 8s infinite linear;
-    }
-    @keyframes iconSpin {
-      0% { transform: rotateY(0deg); }
-      100% { transform: rotateY(360deg); }
-    }
-    .logo-text {
-      font-size: 2rem;
-      font-weight: 900;
-      background: linear-gradient(135deg, #fff, #0ff, #ff0066, #ffcc00);
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      background: linear-gradient(120deg, #ffffff, #00e5ff);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      letter-spacing: -0.5px;
-      text-shadow: 0 0 20px rgba(0,255,255,0.5);
-      animation: logoGlow 3s ease-in-out infinite;
-    }
-    @keyframes logoGlow {
-      0%, 100% { filter: brightness(1); text-shadow: 0 0 10px cyan; }
-      50% { filter: brightness(1.2); text-shadow: 0 0 30px cyan, 0 0 10px #ff0066; }
     }
 
     .nav-links {
       display: flex;
       gap: 2.5rem;
     }
+
     .nav-links a {
-      color: #fff;
+      color: #d0d0d5;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: 0.3s;
-      position: relative;
-    }
-    .nav-links a::before {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 0%;
-      height: 3px;
-      background: linear-gradient(90deg, #0ff, #ff0066);
-      transition: 0.4s;
-    }
-    .nav-links a:hover::before {
-      width: 100%;
-    }
-    .nav-links a:hover {
-      color: #0ff;
-      text-shadow: 0 0 12px cyan;
-      transform: translateY(-2px);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
     }
 
-    /* Hero Section - Extreme Legendary */
+    .nav-links a:hover {
+      color: #00e5ff;
+    }
+
+    /* ---------- HERO SECTION ---------- */
     .hero {
-      min-height: 95vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      perspective: 1200px;
+      padding-top: 5rem;
     }
+
     .hero-content {
-      transform-style: preserve-3d;
-      animation: floatLegend 4s ease-in-out infinite;
+      max-width: 800px;
     }
-    @keyframes floatLegend {
-      0%, 100% { transform: translateY(0px) rotateX(0deg) rotateY(0deg); }
-      50% { transform: translateY(-20px) rotateX(3deg) rotateY(2deg); }
-    }
+
     .hero-badge {
-      background: rgba(0, 255, 255, 0.2);
-      border-radius: 50px;
-      padding: 0.7rem 1.8rem;
       display: inline-block;
-      margin-bottom: 2rem;
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(0,255,255,0.6);
-      font-weight: 600;
-      letter-spacing: 2px;
-      font-size: 0.9rem;
-    }
-    .hero-logo-3d {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-    .hero-crown-icon {
-      font-size: 5rem;
-      filter: drop-shadow(0 0 20px gold);
-      animation: crownPulse 2s infinite alternate;
-      display: inline-block;
-    }
-    @keyframes crownPulse {
-      0% { transform: scale(0.95); text-shadow: 0 0 5px gold;}
-      100% { transform: scale(1.1); text-shadow: 0 0 25px #ffaa00;}
-    }
-    h1 {
-      font-size: 7rem;
-      font-weight: 900;
-      background: linear-gradient(135deg, #ffffff, #0ff, #ff0066, #ffcc00);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin: 1rem 0;
-      text-shadow: 0 0 50px rgba(0,255,255,0.4);
-      letter-spacing: -2px;
-    }
-    .tagline {
-      font-size: 1.8rem;
-      color: rgba(255,255,255,0.9);
-      margin: 1rem 0;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #00e5ff;
+      margin-bottom: 1.5rem;
       font-weight: 500;
-      text-shadow: 0 0 20px rgba(0,255,255,0.3);
     }
-    .subscribe-btn {
-      background: linear-gradient(135deg, #ff3131, #ff0066, #ff6600);
-      border: none;
-      padding: 1.2rem 3.5rem;
-      font-weight: bold;
-      border-radius: 60px;
-      color: white;
-      font-size: 1.4rem;
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: #a0a0a8;
+      margin: 1.5rem 0 2.5rem;
+      max-width: 560px;
+    }
+
+    .btn-primary {
+      background: rgba(0, 229, 255, 0.1);
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.85rem 2rem;
+      border-radius: 2rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #00e5ff;
       cursor: pointer;
-      transition: all 0.4s;
-      margin-top: 2.5rem;
-      box-shadow: 0 15px 40px rgba(255,0,0,0.4);
-      position: relative;
+      transition: all 0.25s;
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-primary:hover {
+      background: rgba(0, 229, 255, 0.2);
+      border-color: #00e5ff;
+      transform: scale(1.02);
+    }
+
+    /* ---------- BENTO GRID SECTIONS ---------- */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .bento-card {
+      background: rgba(15, 15, 20, 0.5);
+      backdrop-filter: blur(12px);
+      border-radius: 2rem;
+      border: 0.5px solid rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
       overflow: hidden;
     }
-    .subscribe-btn::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -60%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
-      transform: rotate(25deg);
-      transition: 0.5s;
-      opacity: 0;
-    }
-    .subscribe-btn:hover::after {
-      opacity: 1;
-      left: -30%;
-    }
-    .subscribe-btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 50px rgba(255,0,100,0.8);
+
+    .bento-card:hover {
+      border-color: rgba(0, 229, 255, 0.3);
+      transform: translateY(-4px);
+      background: rgba(20, 20, 28, 0.6);
     }
 
-    section {
-      margin: 7rem 0;
-    }
-    h2 {
-      font-size: 3.2rem;
-      margin-bottom: 2.8rem;
-      background: linear-gradient(135deg, #fff, #0ff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      border-left: 6px solid #0ff;
-      padding-left: 1.8rem;
-      text-shadow: 0 0 10px rgba(0,255,255,0.3);
+    .bento-card.large {
+      grid-column: span 2;
     }
 
-    /* Info Grid - Legendary Cards */
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2.5rem;
-    }
-    .info-card {
-      padding: 2.5rem;
-      text-align: center;
-      transform-style: preserve-3d;
-    }
-    .info-icon {
-      font-size: 4rem;
-      margin-bottom: 1.2rem;
-      filter: drop-shadow(0 0 15px rgba(0,255,255,0.5));
-    }
-    .info-card h3 {
+    .bento-card .icon {
       font-size: 2rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, #0ff, #fff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    .info-card p {
-      font-size: 1rem;
-      color: #ddd;
+      margin-bottom: 1.2rem;
     }
 
-    /* Business Section - Extreme Legendary */
-    .business-card {
-      padding: 3rem;
-      text-align: center;
-      background: linear-gradient(135deg, rgba(0,20,40,0.6), rgba(10,10,30,0.6));
-      position: relative;
+    .bento-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
     }
-    .business-icon-logo {
-      font-size: 3.5rem;
-      background: rgba(0,0,0,0.5);
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
+
+    /* ---------- SPLIT LAYOUT ---------- */
+    .split-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .split-content h2 {
+      margin-bottom: 1rem;
+    }
+
+    .stat-list {
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .stat-item {
+      text-align: left;
+    }
+
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #00e5ff;
+      line-height: 1;
+    }
+
+    /* ---------- VIDEO PREVIEW CARD ---------- */
+    .video-preview {
+      background: #0a0a0f;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      border: 0.5px solid rgba(255, 255, 255, 0.08);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1rem auto;
-      border: 2px solid cyan;
-      box-shadow: 0 0 25px cyan;
-      backdrop-filter: blur(5px);
-    }
-    .email-legend {
-      background: linear-gradient(135deg, rgba(0,255,255,0.15), rgba(255,0,100,0.1));
-      padding: 1.5rem 2.5rem;
-      border-radius: 1.5rem;
-      text-align: center;
-      font-size: 1.4rem;
-      margin: 2rem auto;
-      border: 2px solid rgba(0,255,255,0.5);
-      display: inline-block;
-      backdrop-filter: blur(10px);
-    }
-    .email-legend a {
-      color: #0ff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.6rem;
-      transition: 0.3s;
-    }
-    .email-legend a:hover {
-      text-shadow: 0 0 20px cyan;
-      letter-spacing: 1px;
+      cursor: pointer;
+      transition: transform 0.3s;
     }
 
-    /* Social Links - Legendary */
-    .social-section {
-      margin-top: 2rem;
+    .video-preview:hover {
+      transform: scale(0.98);
     }
-    .social-grid {
+
+    .video-preview-inner {
+      background: #111116;
+      width: 100%;
+      height: 100%;
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
+      flex-direction: column;
+      color: #3a3a44;
     }
-    .social-link-card {
-      padding: 1.5rem 2.5rem;
+
+    /* ---------- CREATOR CARDS WITH OFFICIAL LOGOS ---------- */
+    .creator-grid {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .creator-card {
+      flex: 1;
+      min-width: 180px;
+      background: rgba(10, 10, 15, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 1.5rem;
+      padding: 1.5rem;
       text-align: center;
-      min-width: 200px;
-      transition: all 0.3s;
+      border: 0.5px solid rgba(255, 255, 255, 0.05);
+      transition: 0.25s;
       cursor: pointer;
     }
-    .social-link-card:hover {
-      transform: translateY(-8px) scale(1.05);
-    }
-    .social-icon-large {
-      font-size: 3.5rem;
-      margin-bottom: 0.8rem;
-      display: inline-block;
-      filter: drop-shadow(0 0 8px currentColor);
-    }
-    .social-link-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-    }
-    .social-link-card p {
-      font-size: 0.85rem;
-      color: #aaa;
-    }
-    .social-link-card a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
+
+    .creator-card:hover {
+      border-color: rgba(0, 229, 255, 0.3);
+      background: rgba(20, 20, 28, 0.7);
+      transform: translateY(-4px);
     }
 
-    /* Stats Section - Legendary */
-    .stats-grid {
+    /* Official SVG Logo Styles */
+    .social-logo {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 0.8rem auto;
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .stat-item {
-      flex: 1;
-      min-width: 200px;
-      text-align: center;
-      padding: 2rem;
-    }
-    .stat-number {
-      font-size: 3rem;
-      font-weight: 900;
-      color: #0ff;
-      text-shadow: 0 0 20px cyan;
-    }
-    .stat-logo-emoji {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
     }
 
+    .social-logo svg {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.2s;
+    }
+
+    .creator-card:hover .social-logo svg {
+      transform: scale(1.05);
+    }
+
+    .creator-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    /* ---------- 3D CANVAS - BMW CAR ---------- */
+    #three-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -3;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    /* ---------- FOOTER ---------- */
     footer {
+      padding: 3rem 0;
+      border-top: 0.5px solid rgba(255, 255, 255, 0.05);
       text-align: center;
-      padding: 3rem;
-      border-top: 2px solid rgba(0, 255, 255, 0.4);
-      margin-top: 5rem;
-      background: rgba(0,0,0,0.4);
-      backdrop-filter: blur(10px);
-    }
-    .footer-logo {
-      font-size: 2rem;
-      margin-bottom: 0.8rem;
-      display: inline-block;
-      filter: drop-shadow(0 0 10px cyan);
+      font-size: 0.85rem;
+      color: #5a5a60;
     }
 
-    @media (max-width: 768px) {
-      .container { padding: 0 1.2rem; }
-      h1 { font-size: 3rem; }
-      .tagline { font-size: 1.2rem; }
-      h2 { font-size: 2rem; }
-      .navbar { flex-direction: column; gap: 1rem; }
-      .nav-links { gap: 1.5rem; }
-      .email-legend a { font-size: 1rem; }
-      .logo-text { font-size: 1.4rem; }
-      .logo-icon { font-size: 2rem; }
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .bento-grid {
+        grid-template-columns: 1fr;
+      }
+      .bento-card.large {
+        grid-column: span 1;
+      }
+      .split-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .navbar {
+        padding: 0.7rem 1.2rem;
+        width: 95%;
+      }
+      .nav-links {
+        gap: 1.2rem;
+      }
+      .container {
+        padding: 0 1.2rem;
+      }
+      section {
+        margin: 5rem 0;
+      }
     }
 
-    /* Scroll Reveal */
+    /* Animation reveal */
     .reveal {
       opacity: 0;
-      transform: translateY(60px) rotateX(10deg);
-      transition: all 0.9s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0) rotateX(0);
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     }
 
-    /* Legendary Glow Text Effect */
-    .legendary-text {
-      background: linear-gradient(135deg, #ffcc00, #ff0066, #0ff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      animation: textShift 3s infinite;
-    }
-    @keyframes textShift {
-      0%, 100% { filter: hue-rotate(0deg); }
-      50% { filter: hue-rotate(15deg); }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
 
-<!-- 8K Particle Background -->
-<canvas id="canvas-bg"></canvas>
-<!-- Falling Legendary Icons Canvas -->
-<canvas id="falling-canvas"></canvas>
+<div class="bg-gradient"></div>
+<div class="bg-ambient"></div>
+<canvas id="three-canvas"></canvas>
 
-<div class="content-wrapper">
-  <nav class="navbar">
-    <div class="logo-wrapper" onclick="window.scrollTo({top:0, behavior:'smooth'})">
-      <div class="logo-icon">👑</div>
-      <div class="logo-text">BILLESH BHAI</div>
-    </div>
-    <div class="nav-links">
-      <a href="#home">HOME</a>
-      <a href="#about">ABOUT</a>
-      <a href="#business">BUSINESS</a>
-      <a href="#social">SOCIAL</a>
-    </div>
-  </nav>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">Billesh Bhai</div>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#work">Content</a>
+    <a href="#business">Business</a>
+    <a href="#connect">Connect</a>
+  </div>
+</nav>
 
-  <main>
-    <!-- Hero Section - Extreme Legendary -->
-    <section id="home" class="hero">
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
       <div class="hero-content">
-        <div class="hero-logo-3d">
-          <span class="hero-crown-icon">👑</span>
-        </div>
-        <div class="hero-badge">LEGENDARY 8K 3D EXPERIENCE</div>
-        <h1>BILLESH BHAI</h1>
-        <div class="tagline">FUNNY SHORTS | CAT VIDEOS | MEMES | BUSINESS</div>
-        <button class="subscribe-btn" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
-          SUBSCRIBE NOW
-        </button>
+        <div class="hero-badge">Creator / Entertainer</div>
+        <h1>Billesh Bhai</h1>
+        <p class="hero-description">Funny shorts, cat moments, memes, and a new vision for business content. Built different.</p>
+        <button class="btn-primary" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">Subscribe →</button>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About Section - Legendary -->
-    <section id="about" class="container reveal">
-      <h2>LEGENDARY STATUS</h2>
-      <div class="glass-3d" style="padding: 2.8rem;">
-        <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
-          <div style="background: radial-gradient(circle, #0ff, #0055aa); border-radius: 50%; padding: 18px; box-shadow: 0 0 40px cyan; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.8rem;">
-            <span style="font-size: 4rem;">👑</span>
+  <!-- Bento Grid: Core Offerings -->
+  <section id="work" class="container reveal">
+    <h2>Essentials</h2>
+    <div class="bento-grid">
+      <div class="bento-card">
+        <div class="icon">🎭</div>
+        <h3>Funny Shorts</h3>
+        <p class="text-subtle">Daily comedy sketches, punchlines that hit different.</p>
+      </div>
+      <div class="bento-card">
+        <div class="icon">🐱</div>
+        <h3>Cat Universe</h3>
+        <p class="text-subtle">Unfiltered, hilarious cat content for the culture.</p>
+      </div>
+      <div class="bento-card">
+        <div class="icon">⚡</div>
+        <h3>Memes</h3>
+        <p class="text-subtle">Viral meme edits that define the timeline.</p>
+      </div>
+      <div class="bento-card large">
+        <div class="icon">📈</div>
+        <h3>Business Expansion</h3>
+        <p class="text-subtle">Coming 2025 — motivational deep dives, entrepreneur mindset, growth strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Split Layout: Stats + Video Preview -->
+  <section class="container reveal">
+    <div class="split-layout">
+      <div class="split-content">
+        <h2>Global <span class="text-accent">Impact</span></h2>
+        <p class="text-subtle" style="margin-bottom: 2rem;">Millions served. Billions of laughs. This is just the start.</p>
+        <div class="stat-list">
+          <div class="stat-item">
+            <div class="stat-number" data-target="1.4">0M</div>
+            <p class="text-subtle">Monthly Views</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="850">0K</div>
+            <p class="text-subtle">Community</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="180">0</div>
+            <p class="text-subtle">Viral Shorts</p>
           </div>
         </div>
-        <p style="font-size: 1.4rem; line-height: 1.7; margin-bottom: 1.8rem; text-align: center;">
-          <strong class="legendary-text">BILLESH BHAI</strong> — The ultimate destination for daily laughter, hilarious funny shorts, 
-          adorable cat moments, and viral meme edits. Currently ruling the entertainment space, 
-          with a massive expansion into <strong style="color:#0ff">BUSINESS AND MOTIVATIONAL CONTENT</strong> coming soon.
-        </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin-top: 1.5rem;">
-          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">FUNNY SHORTS</span>
-          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">CAT VIDEOS</span>
-          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">MEME EDITS</span>
-          <span style="background: rgba(0,255,255,0.15); padding: 0.7rem 1.5rem; border-radius: 2rem; backdrop-filter: blur(5px);">BUSINESS CONTENT</span>
+      </div>
+      <div class="video-preview" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
+        <div class="video-preview-inner">
+          <span style="font-size: 3rem; margin-bottom: 0.5rem;">▶</span>
+          <span style="font-size: 0.8rem;">Watch the reel</span>
         </div>
       </div>
-    </section>
-
-    <!-- Features Grid - Legendary -->
-    <section class="container reveal">
-      <h2>LEGENDARY FEATURES</h2>
-      <div class="info-grid">
-        <div class="glass-3d info-card">
-          <div class="info-icon">🎯</div>
-          <h3>FUNNY SHORTS</h3>
-          <p>Daily dose of premium comedy sketches that keep you hooked</p>
-        </div>
-        <div class="glass-3d info-card">
-          <div class="info-icon">🐱</div>
-          <h3>CAT CONTENT</h3>
-          <p>Next-level adorable and hilarious cat moments</p>
-        </div>
-        <div class="glass-3d info-card">
-          <div class="info-icon">🚀</div>
-          <h3>BUSINESS EXPANSION</h3>
-          <p>Coming soon: Motivational and business growth content</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Business Collaboration Section - Legendary -->
-    <section id="business" class="container reveal">
-      <h2>BUSINESS AND COLLABORATIONS</h2>
-      <div class="glass-3d business-card">
-        <div class="business-icon-logo">
-          <span style="font-size: 2.5rem;">💼</span>
-        </div>
-        <p style="font-size: 1.3rem; margin-bottom: 1.8rem;">
-          Ready for brand collaborations, sponsorships, or partnerships?<br>
-          Connect directly for all business inquiries.
-        </p>
-        <div class="email-legend">
-          <strong>BUSINESS CONTACT</strong><br>
-          <a href="mailto:zlxyoutuber@gmail.com">zlxyoutuber@gmail.com</a>
-        </div>
-        <p style="margin-top: 1.8rem; color: #aaa; font-size: 1rem;">
-          For brand deals, promotions, or collaboration opportunities.
-        </p>
-      </div>
-    </section>
-
-    <!-- Social Media Section - Legendary -->
-    <section id="social" class="container reveal">
-      <h2>CONNECT WITH BILLESH BHAI</h2>
-      <div class="social-grid">
-        <div class="glass-3d social-link-card" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
-          <div class="social-icon-large">▶️</div>
-          <h3>YOUTUBE</h3>
-          <p>@billeshbhai</p>
-          <p style="font-size:0.75rem; color:#0ff;">SUBSCRIBE NOW</p>
-        </div>
-        <div class="glass-3d social-link-card" onclick="window.open('https://www.instagram.com/billeshbhaiofficial/', '_blank')">
-          <div class="social-icon-large">📸</div>
-          <h3>INSTAGRAM</h3>
-          <p>@billeshbhaiofficial</p>
-          <p style="font-size:0.75rem; color:#0ff;">FOLLOW NOW</p>
-        </div>
-        <div class="glass-3d social-link-card" onclick="window.open('https://x.com/itzzlx', '_blank')">
-          <div class="social-icon-large">𝕏</div>
-          <h3>X TWITTER</h3>
-          <p>@itzzlx</p>
-          <p style="font-size:0.75rem; color:#0ff;">FOLLOW NOW</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats Section - Legendary -->
-    <section class="container reveal">
-      <h2>LEGENDARY STATS</h2>
-      <div class="glass-3d stats-grid">
-        <div class="stat-item">
-          <div class="stat-logo-emoji">📈</div>
-          <div class="stat-number">1M+</div>
-          <p>MONTHLY VIEWS</p>
-        </div>
-        <div class="stat-item">
-          <div class="stat-logo-emoji">🌍</div>
-          <div class="stat-number">500K+</div>
-          <p>COMMUNITY REACH</p>
-        </div>
-        <div class="stat-item">
-          <div class="stat-logo-emoji">⚡</div>
-          <div class="stat-number">100+</div>
-          <p>VIRAL SHORTS</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-logo">👑 BILLESH BHAI 👑</div>
-    <p>2025 BILLESH BHAI — LEGENDARY YOUTUBE CHANNEL</p>
-    <p style="margin: 0.8rem 0; font-size: 0.95rem; color: #88aaff;">FUNNY SHORTS | CAT VIDEOS | MEMES | BUSINESS CONTENT</p>
-    <div style="margin-top: 1rem;">
-      <p style="font-size:0.85rem;">YOUTUBE | INSTAGRAM | X TWITTER</p>
     </div>
-  </footer>
-</div>
+  </section>
 
-<script>
-  // 8K Particle Background Animation
-  const canvas = document.getElementById('canvas-bg');
-  const ctx = canvas.getContext('2d');
-  
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
+  <!-- Business / Collaboration Section -->
+  <section id="business" class="container reveal">
+    <div class="bento-card" style="padding: 2.5rem; text-align: center;">
+      <h2 style="margin-bottom: 0.5rem;">Collaborate</h2>
+      <p class="text-subtle" style="max-width: 500px; margin: 0 auto 1.8rem;">Brand partnerships, sponsorships, and creative alliances.</p>
+      <div style="background: rgba(0, 229, 255, 0.05); border-radius: 3rem; padding: 0.8rem 1.8rem; display: inline-block; border: 0.5px solid rgba(0,229,255,0.2);">
+        <a href="mailto:zlxyoutuber@gmail.com" style="color: #00e5ff; text-decoration: none; font-weight: 500;">zlxyoutuber@gmail.com</a>
+      </div>
+    </div>
+  </section>
 
-  const particles = [];
-  const particleCount = 220;
+  <!-- Premium Creator Cards with Official Logos -->
+  <section id="connect" class="container reveal">
+    <h2>Digital Presence</h2>
+    <div class="creator-grid">
+      <!-- YouTube -->
+      <div class="creator-card" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
+        <div class="social-logo">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="color: #FF0000;">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.376.505A3.016 3.016 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.376-.505a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </div>
+        <h3>YouTube</h3>
+        <p class="text-subtle">@billeshbhai</p>
+      </div>
+      <!-- Instagram -->
+      <div class="creator-card" onclick="window.open('https://www.instagram.com/billeshbhaiofficial/', '_blank')">
+        <div class="social-logo">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="color: #E4405F;">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+          </svg>
+        </div>
+        <h3>Instagram</h3>
+        <p class="text-subtle">@billeshbhaiofficial</p>
+      </div>
+      <!-- X (Twitter) -->
+      <div class="creator-card" onclick="window.open('https://x.com/itzzlx', '_blank')">
+        <div class="social-logo">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="color: #ffffff;">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </div>
+        <h3>X (Twitter)</h3>
+        <p class="text-subtle">@itzzlx</p>
+      </div>
+    </div>
+  </section>
+</main>
 
-  for (let i = 0; i < particleCount; i++) {
-    particles.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      radius: Math.random() * 2.5 + 0.5,
-      speedX: (Math.random() - 0.5) * 0.6,
-      speedY: (Math.random() - 0.5) * 0.4,
-      alpha: Math.random() * 0.6 + 0.2,
-      color: `hsl(${Math.random() * 60 + 180}, 100%, 60%)`
-    });
-  }
+<footer>
+  <p>Billesh Bhai — Creator Empire</p>
+  <p class="text-subtle" style="margin-top: 0.5rem;">Funny Shorts · Cat Videos · Memes · Business Culture</p>
+</footer>
 
-  function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    for (let p of particles) {
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = p.color;
-      ctx.shadowBlur = 6;
-      ctx.shadowColor = '#0ff';
-      ctx.fill();
-      
-      p.x += p.speedX;
-      p.y += p.speedY;
-      
-      if (p.x < 0) p.x = canvas.width;
-      if (p.x > canvas.width) p.x = 0;
-      if (p.y < 0) p.y = canvas.height;
-      if (p.y > canvas.height) p.y = 0;
+<!-- Three.js with Premium BMW Model -->
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
     }
+  }
+</script>
+
+<script type="module">
+  import * as THREE from 'three';
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+  import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+  const canvas = document.getElementById('three-canvas');
+  if (canvas) {
+    const scene = new THREE.Scene();
+    scene.background = null;
+    scene.environment = null;
     
-    requestAnimationFrame(animateParticles);
-  }
-  
-  animateParticles();
-
-  // Falling Legendary Icons Animation
-  const fallingCanvas = document.getElementById('falling-canvas');
-  const fallingCtx = fallingCanvas.getContext('2d');
-  
-  function resizeFallingCanvas() {
-    fallingCanvas.width = window.innerWidth;
-    fallingCanvas.height = window.innerHeight;
-  }
-  resizeFallingCanvas();
-  window.addEventListener('resize', resizeFallingCanvas);
-
-  const icons = ['👑', '▶️', '📸', '𝕏', '🐱', '🎬'];
-  const fallingIcons = [];
-
-  for (let i = 0; i < 80; i++) {
-    fallingIcons.push({
-      x: Math.random() * fallingCanvas.width,
-      y: Math.random() * fallingCanvas.height,
-      size: Math.random() * 28 + 16,
-      speed: Math.random() * 1.8 + 0.6,
-      icon: icons[Math.floor(Math.random() * icons.length)],
-      rotation: Math.random() * 360,
-      opacity: Math.random() * 0.5 + 0.2
-    });
-  }
-
-  function animateFalling() {
-    fallingCtx.clearRect(0, 0, fallingCanvas.width, fallingCanvas.height);
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.5, 100);
+    camera.position.set(3, 1.5, 5);
+    camera.lookAt(0, 0.2, 0);
     
-    for (let obj of fallingIcons) {
-      fallingCtx.save();
-      fallingCtx.font = `${obj.size}px "Segoe UI Emoji", "Apple Color Emoji", sans-serif`;
-      fallingCtx.shadowBlur = 10;
-      fallingCtx.shadowColor = '#0ff';
-      fallingCtx.globalAlpha = obj.opacity;
-      fallingCtx.translate(obj.x + obj.size/2, obj.y + obj.size/2);
-      fallingCtx.rotate(obj.rotation * Math.PI / 180);
-      
-      if (obj.icon === '▶️') fallingCtx.fillStyle = '#ff0000';
-      else if (obj.icon === '📸') fallingCtx.fillStyle = '#ff0066';
-      else if (obj.icon === '𝕏') fallingCtx.fillStyle = '#ffffff';
-      else if (obj.icon === '👑') fallingCtx.fillStyle = '#ffcc00';
-      else fallingCtx.fillStyle = '#0ff';
-      
-      fallingCtx.fillText(obj.icon, -obj.size/2, -obj.size/2);
-      fallingCtx.restore();
-      
-      obj.y += obj.speed;
-      obj.rotation += 2;
-      
-      if (obj.y > fallingCanvas.height) {
-        obj.y = -obj.size;
-        obj.x = Math.random() * fallingCanvas.width;
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setClearColor(0x000000, 0);
+    
+    // Lighting for realistic BMW
+    const ambientLight = new THREE.AmbientLight(0x222222);
+    scene.add(ambientLight);
+    
+    const mainLight = new THREE.DirectionalLight(0xffffff, 1.5);
+    mainLight.position.set(3, 4, 2);
+    scene.add(mainLight);
+    
+    const fillLight = new THREE.PointLight(0x4466aa, 0.6);
+    fillLight.position.set(-2, 1.5, 3);
+    scene.add(fillLight);
+    
+    const rimLight = new THREE.PointLight(0xffaa66, 0.5);
+    rimLight.position.set(1, 2, -3);
+    scene.add(rimLight);
+    
+    const backLight = new THREE.PointLight(0x00aaff, 0.4);
+    backLight.position.set(0, 1, -4);
+    scene.add(backLight);
+    
+    // Ground reflection helper (subtle)
+    const gridHelper = new THREE.GridHelper(20, 20, 0x00e5ff, 0x224466);
+    gridHelper.position.y = -0.8;
+    gridHelper.material.transparent = true;
+    gridHelper.material.opacity = 0.12;
+    scene.add(gridHelper);
+    
+    // Simple reflective plane for shadow (invisible but catches reflections)
+    const planeMat = new THREE.MeshStandardMaterial({ color: 0x111122, roughness: 0.4, metalness: 0.7, transparent: true, opacity: 0.2 });
+    const groundPlane = new THREE.Mesh(new THREE.PlaneGeometry(8, 8), planeMat);
+    groundPlane.rotation.x = -Math.PI / 2;
+    groundPlane.position.y = -0.75;
+    scene.add(groundPlane);
+    
+    let carModel = null;
+    const loader = new GLTFLoader();
+    // High-quality BMW M4 Coupe model (external premium asset)
+    // Using a reliable, high-quality BMW GLTF from a CDN (Sketchfab standard asset)
+    const bmwUrl = 'https://threejs.org/examples/models/gltf/BMW.glb';
+    
+    loader.load(bmwUrl, 
+      (gltf) => {
+        carModel = gltf.scene;
+        carModel.scale.set(0.65, 0.65, 0.65);
+        carModel.position.set(0, -0.6, 0);
+        carModel.traverse((child) => {
+          if (child.isMesh) {
+            child.castShadow = true;
+            child.receiveShadow = false;
+            if (child.material) {
+              child.material.roughness = 0.25;
+              child.material.metalness = 0.85;
+              child.material.envMapIntensity = 1.2;
+            }
+          }
+        });
+        scene.add(carModel);
+      },
+      undefined,
+      (error) => {
+        console.error('BMW model load error, fallback to premium abstract shape:', error);
+        // Fallback: create a premium sports car shape using mesh combinations
+        const bodyGeo = new THREE.BoxGeometry(1.2, 0.4, 2.2);
+        const bodyMat = new THREE.MeshStandardMaterial({ color: 0x2244aa, metalness: 0.9, roughness: 0.2 });
+        const body = new THREE.Mesh(bodyGeo, bodyMat);
+        body.position.y = -0.2;
+        scene.add(body);
+        
+        const roofGeo = new THREE.CylinderGeometry(0.5, 0.6, 0.5, 16);
+        const roofMat = new THREE.MeshStandardMaterial({ color: 0x112233, metalness: 0.7 });
+        const roof = new THREE.Mesh(roofGeo, roofMat);
+        roof.position.y = 0.15;
+        scene.add(roof);
+        
+        const wheelMat = new THREE.MeshStandardMaterial({ color: 0x111111, metalness: 0.6, roughness: 0.4 });
+        const positions = [[-0.7, -0.35, 0.8], [0.7, -0.35, 0.8], [-0.7, -0.35, -0.8], [0.7, -0.35, -0.8]];
+        positions.forEach(pos => {
+          const wheelGeo = new THREE.CylinderGeometry(0.28, 0.28, 0.3, 24);
+          const wheel = new THREE.Mesh(wheelGeo, wheelMat);
+          wheel.rotation.z = Math.PI / 2;
+          wheel.position.set(pos[0], pos[1], pos[2]);
+          scene.add(wheel);
+        });
+        
+        const headlightMat = new THREE.MeshStandardMaterial({ color: 0xffaa66, emissive: 0xff4400, emissiveIntensity: 0.3 });
+        const leftLight = new THREE.Mesh(new THREE.SphereGeometry(0.12, 16, 16), headlightMat);
+        leftLight.position.set(-0.45, -0.05, 1.15);
+        const rightLight = new THREE.Mesh(new THREE.SphereGeometry(0.12, 16, 16), headlightMat);
+        rightLight.position.set(0.45, -0.05, 1.15);
+        scene.add(leftLight);
+        scene.add(rightLight);
       }
-    }
+    );
     
-    requestAnimationFrame(animateFalling);
+    // Subtle floating particles (minimal, elegant)
+    const particleCount = 300;
+    const particleGeo = new THREE.BufferGeometry();
+    const positions = new Float32Array(particleCount * 3);
+    for (let i = 0; i < particleCount; i++) {
+      positions[i*3] = (Math.random() - 0.5) * 15;
+      positions[i*3+1] = (Math.random() - 0.5) * 6;
+      positions[i*3+2] = (Math.random() - 0.5) * 12 - 4;
+    }
+    particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    const particleMat = new THREE.PointsMaterial({ color: 0x88aaff, size: 0.03, transparent: true, opacity: 0.25 });
+    const particles = new THREE.Points(particleGeo, particleMat);
+    scene.add(particles);
+    
+    let time = 0;
+    function animate() {
+      requestAnimationFrame(animate);
+      time += 0.006;
+      
+      if (carModel) {
+        carModel.rotation.y = Math.sin(time * 0.2) * 0.15;
+        carModel.position.y = -0.6 + Math.sin(time * 1.5) * 0.008;
+      }
+      
+      particles.rotation.y = time * 0.03;
+      particles.rotation.x = Math.sin(time * 0.1) * 0.02;
+      
+      // Smooth camera motion
+      camera.position.x += (Math.sin(time * 0.15) * 0.08 - camera.position.x) * 0.02;
+      camera.position.y += (1.2 + Math.sin(time * 0.25) * 0.05 - camera.position.y) * 0.02;
+      camera.lookAt(0, 0.1, 0);
+      
+      renderer.render(scene, camera);
+    }
+    animate();
+    
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
   }
-  
-  animateFalling();
+</script>
 
-  // Scroll Reveal Animation
-  const reveals = document.querySelectorAll('.reveal');
+<!-- Scroll & Counter Animation + Reveal -->
+<script>
+  // Scroll reveal observer
+  const revealElements = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.15 });
+  revealElements.forEach(el => observer.observe(el));
   
-  reveals.forEach(el => observer.observe(el));
-
-  // Smooth scrolling
+  // Smooth anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
-
-  // 3D Mouse Parallax Effect on Hero
-  const hero = document.querySelector('.hero');
-  if (hero) {
-    document.addEventListener('mousemove', (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 20;
-      const y = (e.clientY / window.innerHeight - 0.5) * 15;
-      hero.style.transform = `perspective(1200px) rotateY(${x * 0.03}deg) rotateX(${y * -0.02}deg)`;
-    });
+  
+  // Animated stats counter
+  const statNumbers = document.querySelectorAll('.stat-number');
+  let animated = false;
+  
+  function animateStats() {
+    if (animated) return;
+    const statsSection = document.querySelector('.split-layout');
+    if (!statsSection) return;
+    const rect = statsSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100 && !animated) {
+      animated = true;
+      statNumbers.forEach(stat => {
+        const targetText = stat.getAttribute('data-target');
+        if (!targetText) return;
+        let targetNum = parseFloat(targetText);
+        let suffix = '';
+        if (stat.innerText.includes('M')) suffix = 'M';
+        else if (stat.innerText.includes('K')) suffix = 'K';
+        else suffix = '';
+        
+        let finalValue = targetNum;
+        let current = 0;
+        const increment = finalValue / 45;
+        const updateCounter = () => {
+          current += increment;
+          if (current < finalValue) {
+            if (suffix === 'M') stat.innerText = Math.floor(current) + 'M';
+            else if (suffix === 'K') stat.innerText = Math.floor(current) + 'K';
+            else stat.innerText = Math.floor(current);
+            requestAnimationFrame(updateCounter);
+          } else {
+            if (suffix === 'M') stat.innerText = finalValue + 'M';
+            else if (suffix === 'K') stat.innerText = finalValue + 'K';
+            else stat.innerText = finalValue;
+          }
+        };
+        updateCounter();
+      });
+    }
   }
-
-  // Add 3D tilt to cards
-  const cards = document.querySelectorAll('.glass-3d');
-  cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = (y - centerY) / 20;
-      const rotateY = (centerX - x) / 20;
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
-    });
+  
+  window.addEventListener('scroll', animateStats);
+  window.addEventListener('load', animateStats);
+  
+  // Subtle parallax for hero
+  window.addEventListener('mousemove', (e) => {
+    const heroTitle = document.querySelector('h1');
+    if (!heroTitle) return;
+    const x = (e.clientX / window.innerWidth - 0.5) * 6;
+    const y = (e.clientY / window.innerHeight - 0.5) * 4;
+    heroTitle.style.transform = `translate(${x * 0.3}px, ${y * 0.2}px)`;
+  });
+  
+  // Navbar background opacity on scroll
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.style.background = 'rgba(0, 0, 0, 0.85)';
+      navbar.style.backdropFilter = 'blur(20px)';
+    } else {
+      navbar.style.background = 'rgba(0, 0, 0, 0.72)';
+    }
   });
 </script>
 </body>
