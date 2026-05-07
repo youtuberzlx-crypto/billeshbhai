@@ -3,25 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Billesh Bhai — Funny Shorts, Cat Videos, Memes & Business. The next generation creator brand.">
+  <meta name="description" content="Billesh Bhai — Funny Shorts, Cat Videos, Memes & Business Content. Small creator, big dreams.">
   <meta name="theme-color" content="#000000">
-  <title>Billesh Bhai — Creator Brand</title>
+  <title>Billesh Bhai — Creator</title>
   
-  <!-- Preconnect for performance -->
+  <!-- Classic Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000000'/%3E%3Ctext x='50' y='72' font-size='70' text-anchor='middle' fill='%2300e5ff' font-family='Arial, sans-serif' font-weight='bold'%3EBB%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000000'/%3E%3Ctext x='50' y='72' font-size='70' text-anchor='middle' fill='%2300e5ff' font-family='Arial, sans-serif' font-weight='bold'%3EBB%3C/text%3E%3C/svg%3E">
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   
   <style>
-    /* ---------- RESET & BASE ---------- */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -30,11 +29,9 @@
       color: #e8e8ec;
       line-height: 1.5;
       overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* ---------- BACKGROUND GRADIENT (subtle) ---------- */
+    /* Background */
     .bg-gradient {
       position: fixed;
       top: 0;
@@ -42,10 +39,9 @@
       width: 100%;
       height: 100%;
       z-index: -2;
-      background: radial-gradient(circle at 20% 30%, rgba(0, 20, 30, 0.4), #000000 80%);
+      background: radial-gradient(circle at 30% 40%, rgba(0, 20, 30, 0.5), #000000 90%);
     }
 
-    /* Subtle animated gradient overlay */
     .bg-ambient {
       position: fixed;
       top: 0;
@@ -53,79 +49,59 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      opacity: 0.3;
-      background: radial-gradient(circle at 40% 60%, rgba(0, 255, 255, 0.08), transparent 70%);
+      opacity: 0.25;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.06), transparent 70%);
       animation: ambientMove 20s ease infinite alternate;
       pointer-events: none;
     }
 
     @keyframes ambientMove {
-      0% { transform: translate(-5%, -5%) scale(1); opacity: 0.2; }
-      100% { transform: translate(5%, 5%) scale(1.2); opacity: 0.4; }
+      0% { transform: scale(1); opacity: 0.2; }
+      100% { transform: scale(1.2); opacity: 0.35; }
     }
 
-    /* ---------- TYPOGRAPHY ---------- */
-    h1, h2, h3 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
+    /* Navbar - Classic & Premium */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 0.5px solid rgba(0, 229, 255, 0.2);
+      padding: 1rem 2rem;
     }
 
-    h1 {
-      font-size: clamp(3.5rem, 12vw, 7rem);
-      line-height: 1.05;
-      font-weight: 700;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      margin-bottom: 1.5rem;
-      font-weight: 600;
-    }
-
-    .text-accent {
-      color: #00e5ff;
-    }
-
-    .text-subtle {
-      color: #8a8a8f;
-      font-size: 0.95rem;
-    }
-
-    /* ---------- LAYOUT CONTAINERS ---------- */
-    .container {
+    .nav-container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    section {
-      margin: 8rem 0;
-    }
-
-    /* ---------- PREMIUM NAVBAR ---------- */
-    .navbar {
-      position: fixed;
-      top: 1.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      max-width: 1280px;
-      z-index: 100;
-      background: rgba(0, 0, 0, 0.72);
-      backdrop-filter: blur(16px);
-      border-radius: 2rem;
-      border: 0.5px solid rgba(0, 229, 255, 0.2);
-      padding: 0.9rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: all 0.3s ease;
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #00e5ff, #0088aa);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #000;
+    }
+
+    .logo-text {
       font-size: 1.3rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
+      font-weight: 700;
       background: linear-gradient(120deg, #ffffff, #00e5ff);
       -webkit-background-clip: text;
       background-clip: text;
@@ -134,7 +110,7 @@
 
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: 2rem;
     }
 
     .nav-links a {
@@ -143,39 +119,67 @@
       font-size: 0.9rem;
       font-weight: 500;
       transition: color 0.2s;
+      padding: 0.5rem 0;
     }
 
-    .nav-links a:hover {
+    .nav-links a:hover, .nav-links a.active {
       color: #00e5ff;
     }
 
-    /* ---------- HERO SECTION ---------- */
+    /* Main Container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    /* Page Sections */
+    .page {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .page.active-page {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero */
     .hero {
-      min-height: 90vh;
+      min-height: 70vh;
       display: flex;
       align-items: center;
-      padding-top: 5rem;
     }
 
     .hero-content {
-      max-width: 800px;
+      max-width: 700px;
     }
 
     .hero-badge {
       display: inline-block;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.2em;
       color: #00e5ff;
       margin-bottom: 1.5rem;
-      font-weight: 500;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 10vw, 6rem);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.02em;
     }
 
     .hero-description {
       font-size: 1.1rem;
       color: #a0a0a8;
-      margin: 1.5rem 0 2.5rem;
-      max-width: 560px;
+      margin: 1.5rem 0 2rem;
+      max-width: 520px;
     }
 
     .btn-primary {
@@ -188,118 +192,92 @@
       color: #00e5ff;
       cursor: pointer;
       transition: all 0.25s;
-      backdrop-filter: blur(8px);
     }
 
     .btn-primary:hover {
       background: rgba(0, 229, 255, 0.2);
-      border-color: #00e5ff;
       transform: scale(1.02);
     }
 
-    /* ---------- BENTO GRID SECTIONS ---------- */
+    /* Section Headers */
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .text-accent {
+      color: #00e5ff;
+    }
+
+    .text-subtle {
+      color: #8a8a8f;
+    }
+
+    /* Bento Grid */
     .bento-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
 
     .bento-card {
       background: rgba(15, 15, 20, 0.5);
       backdrop-filter: blur(12px);
-      border-radius: 2rem;
+      border-radius: 1.5rem;
       border: 0.5px solid rgba(255, 255, 255, 0.05);
       padding: 2rem;
-      transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-      overflow: hidden;
+      transition: all 0.3s;
     }
 
     .bento-card:hover {
       border-color: rgba(0, 229, 255, 0.3);
       transform: translateY(-4px);
-      background: rgba(20, 20, 28, 0.6);
-    }
-
-    .bento-card.large {
-      grid-column: span 2;
     }
 
     .bento-card .icon {
       font-size: 2rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .bento-card h3 {
-      font-size: 1.4rem;
-      margin-bottom: 0.6rem;
-    }
-
-    /* ---------- SPLIT LAYOUT ---------- */
-    .split-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .split-content h2 {
       margin-bottom: 1rem;
     }
 
-    .stat-list {
-      margin-top: 2rem;
-      display: flex;
-      gap: 2rem;
+    .bento-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
     }
 
-    .stat-item {
-      text-align: left;
+    /* Stats (Honest) */
+    .stats-grid {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .stat-card {
+      background: rgba(10, 10, 15, 0.6);
+      border-radius: 1.5rem;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      flex: 1;
+      min-width: 140px;
+      border: 0.5px solid rgba(255, 255, 255, 0.05);
     }
 
     .stat-number {
-      font-size: 2.8rem;
+      font-size: 2rem;
       font-weight: 700;
       color: #00e5ff;
-      line-height: 1;
     }
 
-    /* ---------- VIDEO PREVIEW CARD ---------- */
-    .video-preview {
-      background: #0a0a0f;
-      border-radius: 1.5rem;
-      overflow: hidden;
-      aspect-ratio: 16 / 9;
-      border: 0.5px solid rgba(255, 255, 255, 0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .video-preview:hover {
-      transform: scale(0.98);
-    }
-
-    .video-preview-inner {
-      background: #111116;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: #3a3a44;
-    }
-
-    /* ---------- CREATOR CARDS WITH OFFICIAL LOGOS ---------- */
-    .creator-grid {
+    /* Social Cards with Original Logos */
+    .social-grid {
       display: flex;
       gap: 1.5rem;
       flex-wrap: wrap;
     }
 
-    .creator-card {
+    .social-card {
       flex: 1;
       min-width: 180px;
       background: rgba(10, 10, 15, 0.6);
@@ -307,100 +285,114 @@
       border-radius: 1.5rem;
       padding: 1.5rem;
       text-align: center;
-      border: 0.5px solid rgba(255, 255, 255, 0.05);
-      transition: 0.25s;
       cursor: pointer;
+      transition: all 0.25s;
+      border: 0.5px solid rgba(255, 255, 255, 0.05);
     }
 
-    .creator-card:hover {
-      border-color: rgba(0, 229, 255, 0.3);
-      background: rgba(20, 20, 28, 0.7);
+    .social-card:hover {
+      border-color: rgba(0, 229, 255, 0.4);
       transform: translateY(-4px);
     }
 
-    /* Official SVG Logo Styles */
     .social-logo {
       width: 48px;
       height: 48px;
-      margin: 0 auto 0.8rem auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      margin: 0 auto 0.8rem;
     }
 
     .social-logo svg {
       width: 100%;
       height: 100%;
-      transition: transform 0.2s;
     }
 
-    .creator-card:hover .social-logo svg {
-      transform: scale(1.05);
+    /* Video Grid */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
     }
 
-    .creator-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.4rem;
+    .video-card {
+      background: rgba(10, 10, 15, 0.5);
+      border-radius: 1.5rem;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: 0.5px solid rgba(255, 255, 255, 0.05);
     }
 
-    /* ---------- 3D CANVAS - BMW CAR ---------- */
-    #three-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -3;
-      pointer-events: none;
-      opacity: 0.7;
+    .video-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 229, 255, 0.3);
     }
 
-    /* ---------- FOOTER ---------- */
-    footer {
-      padding: 3rem 0;
-      border-top: 0.5px solid rgba(255, 255, 255, 0.05);
+    .video-thumb {
+      background: #111116;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+
+    .video-info {
+      padding: 1rem;
+    }
+
+    .video-info h4 {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* Business Contact */
+    .contact-card {
+      background: rgba(15, 15, 20, 0.5);
+      backdrop-filter: blur(12px);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
       text-align: center;
-      font-size: 0.85rem;
-      color: #5a5a60;
+      border: 0.5px solid rgba(0, 229, 255, 0.2);
     }
 
-    /* ---------- RESPONSIVE ---------- */
-    @media (max-width: 900px) {
-      .bento-grid {
-        grid-template-columns: 1fr;
-      }
-      .bento-card.large {
-        grid-column: span 1;
-      }
-      .split-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      .navbar {
-        padding: 0.7rem 1.2rem;
-        width: 95%;
+    .email-link {
+      display: inline-block;
+      background: rgba(0, 229, 255, 0.08);
+      border-radius: 3rem;
+      padding: 0.8rem 2rem;
+      margin-top: 1.5rem;
+      border: 0.5px solid rgba(0, 229, 255, 0.3);
+    }
+
+    .email-link a {
+      color: #00e5ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 0.5px solid rgba(255, 255, 255, 0.05);
+      margin-top: 2rem;
+      color: #5a5a60;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 0.8rem;
       }
       .nav-links {
         gap: 1.2rem;
       }
       .container {
-        padding: 0 1.2rem;
+        padding: 2rem 1rem;
       }
-      section {
-        margin: 5rem 0;
+      h2 {
+        font-size: 1.6rem;
       }
-    }
-
-    /* Animation reveal */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
     }
   </style>
 </head>
@@ -408,394 +400,261 @@
 
 <div class="bg-gradient"></div>
 <div class="bg-ambient"></div>
-<canvas id="three-canvas"></canvas>
 
-<!-- Navbar -->
 <nav class="navbar">
-  <div class="logo">Billesh Bhai</div>
-  <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#work">Content</a>
-    <a href="#business">Business</a>
-    <a href="#connect">Connect</a>
+  <div class="nav-container">
+    <a href="#" class="logo" data-page="home">
+      <div class="logo-icon">BB</div>
+      <span class="logo-text">Billesh Bhai</span>
+    </a>
+    <div class="nav-links">
+      <a href="#" data-page="home" class="active">Home</a>
+      <a href="#" data-page="content">Content</a>
+      <a href="#" data-page="business">Business</a>
+      <a href="#" data-page="connect">Connect</a>
+    </div>
   </div>
 </nav>
 
 <main>
-  <!-- Hero Section -->
-  <section id="home" class="hero">
+  <!-- HOME PAGE -->
+  <div id="home-page" class="page active-page">
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">Creator / Entertainer</div>
-        <h1>Billesh Bhai</h1>
-        <p class="hero-description">Funny shorts, cat moments, memes, and a new vision for business content. Built different.</p>
-        <button class="btn-primary" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">Subscribe →</button>
+      <div class="hero">
+        <div class="hero-content">
+          <div class="hero-badge">✦ SMALL CREATOR · BIG DREAMS ✦</div>
+          <h1>Billesh Bhai</h1>
+          <p class="hero-description">Funny shorts, cat moments, memes, and real talk about the creator journey. No fake numbers. Just real growth.</p>
+          <button class="btn-primary" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">Subscribe →</button>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Bento Grid: Core Offerings -->
-  <section id="work" class="container reveal">
-    <h2>Essentials</h2>
-    <div class="bento-grid">
-      <div class="bento-card">
-        <div class="icon">🎭</div>
-        <h3>Funny Shorts</h3>
-        <p class="text-subtle">Daily comedy sketches, punchlines that hit different.</p>
-      </div>
-      <div class="bento-card">
-        <div class="icon">🐱</div>
-        <h3>Cat Universe</h3>
-        <p class="text-subtle">Unfiltered, hilarious cat content for the culture.</p>
-      </div>
-      <div class="bento-card">
-        <div class="icon">⚡</div>
-        <h3>Memes</h3>
-        <p class="text-subtle">Viral meme edits that define the timeline.</p>
-      </div>
-      <div class="bento-card large">
-        <div class="icon">📈</div>
-        <h3>Business Expansion</h3>
-        <p class="text-subtle">Coming 2025 — motivational deep dives, entrepreneur mindset, growth strategies.</p>
+    <div class="container">
+      <h2>What I <span class="text-accent">Create</span></h2>
+      <div class="bento-grid">
+        <div class="bento-card">
+          <div class="icon">🎭</div>
+          <h3>Funny Shorts</h3>
+          <p class="text-subtle">Daily comedy sketches that actually make you laugh.</p>
+        </div>
+        <div class="bento-card">
+          <div class="icon">🐱</div>
+          <h3>Cat Universe</h3>
+          <p class="text-subtle">Unfiltered, chaotic, adorable cat content.</p>
+        </div>
+        <div class="bento-card">
+          <div class="icon">⚡</div>
+          <h3>Memes</h3>
+          <p class="text-subtle">Viral edits and cultural commentary.</p>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Split Layout: Stats + Video Preview -->
-  <section class="container reveal">
-    <div class="split-layout">
-      <div class="split-content">
-        <h2>Global <span class="text-accent">Impact</span></h2>
-        <p class="text-subtle" style="margin-bottom: 2rem;">Millions served. Billions of laughs. This is just the start.</p>
-        <div class="stat-list">
-          <div class="stat-item">
-            <div class="stat-number" data-target="1.4">0M</div>
-            <p class="text-subtle">Monthly Views</p>
+    <div class="container">
+      <h2>Real <span class="text-accent">Numbers</span></h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">Growing</div>
+          <p class="text-subtle">Subscribers</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Building</div>
+          <p class="text-subtle">Community</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Daily</div>
+          <p class="text-subtle">Uploads</p>
+        </div>
+      </div>
+      <p class="text-subtle" style="margin-top: 1rem; text-align: center; font-size: 0.85rem;">Every creator starts somewhere. This is my journey.</p>
+    </div>
+  </div>
+
+  <!-- CONTENT PAGE -->
+  <div id="content-page" class="page">
+    <div class="container">
+      <h2>Featured <span class="text-accent">Videos</span></h2>
+      <div class="video-grid">
+        <div class="video-card" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
+          <div class="video-thumb">🎬🔥</div>
+          <div class="video-info">
+            <h4>Latest Funny Short</h4>
+            <p class="text-subtle" style="font-size: 0.75rem;">Watch now →</p>
           </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="850">0K</div>
-            <p class="text-subtle">Community</p>
+        </div>
+        <div class="video-card" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
+          <div class="video-thumb">🐱✨</div>
+          <div class="video-info">
+            <h4>Cat Compilation</h4>
+            <p class="text-subtle" style="font-size: 0.75rem;">Watch now →</p>
           </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="180">0</div>
-            <p class="text-subtle">Viral Shorts</p>
+        </div>
+        <div class="video-card" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
+          <div class="video-thumb">😂💀</div>
+          <div class="video-info">
+            <h4>Meme Review</h4>
+            <p class="text-subtle" style="font-size: 0.75rem;">Watch now →</p>
           </div>
         </div>
       </div>
-      <div class="video-preview" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
-        <div class="video-preview-inner">
-          <span style="font-size: 3rem; margin-bottom: 0.5rem;">▶</span>
-          <span style="font-size: 0.8rem;">Watch the reel</span>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- Business / Collaboration Section -->
-  <section id="business" class="container reveal">
-    <div class="bento-card" style="padding: 2.5rem; text-align: center;">
-      <h2 style="margin-bottom: 0.5rem;">Collaborate</h2>
-      <p class="text-subtle" style="max-width: 500px; margin: 0 auto 1.8rem;">Brand partnerships, sponsorships, and creative alliances.</p>
-      <div style="background: rgba(0, 229, 255, 0.05); border-radius: 3rem; padding: 0.8rem 1.8rem; display: inline-block; border: 0.5px solid rgba(0,229,255,0.2);">
-        <a href="mailto:zlxyoutuber@gmail.com" style="color: #00e5ff; text-decoration: none; font-weight: 500;">zlxyoutuber@gmail.com</a>
+    <div class="container">
+      <h2>Content <span class="text-accent">Categories</span></h2>
+      <div class="bento-grid">
+        <div class="bento-card">
+          <div class="icon">🎬</div>
+          <h3>Shorts</h3>
+          <p class="text-subtle">Quick laughs under 60 seconds</p>
+        </div>
+        <div class="bento-card">
+          <div class="icon">🐈</div>
+          <h3>Cats</h3>
+          <p class="text-subtle">Purrfect entertainment</p>
+        </div>
+        <div class="bento-card">
+          <div class="icon">💭</div>
+          <h3>Memes</h3>
+          <p class="text-subtle">Relatable and viral</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Premium Creator Cards with Official Logos -->
-  <section id="connect" class="container reveal">
-    <h2>Digital Presence</h2>
-    <div class="creator-grid">
-      <!-- YouTube -->
-      <div class="creator-card" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
-        <div class="social-logo">
-          <svg viewBox="0 0 24 24" fill="currentColor" style="color: #FF0000;">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.376.505A3.016 3.016 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.376-.505a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-          </svg>
+  <!-- BUSINESS PAGE -->
+  <div id="business-page" class="page">
+    <div class="container">
+      <div class="contact-card">
+        <h2>Let's <span class="text-accent">Collaborate</span></h2>
+        <p class="text-subtle" style="max-width: 500px; margin: 1rem auto;">Brand partnerships, sponsorships, or just good conversation. I'm open to working with brands that align with my vibe.</p>
+        <div class="email-link">
+          📧 <a href="mailto:zlxyoutuber@gmail.com">zlxyoutuber@gmail.com</a>
         </div>
-        <h3>YouTube</h3>
-        <p class="text-subtle">@billeshbhai</p>
-      </div>
-      <!-- Instagram -->
-      <div class="creator-card" onclick="window.open('https://www.instagram.com/billeshbhaiofficial/', '_blank')">
-        <div class="social-logo">
-          <svg viewBox="0 0 24 24" fill="currentColor" style="color: #E4405F;">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-          </svg>
-        </div>
-        <h3>Instagram</h3>
-        <p class="text-subtle">@billeshbhaiofficial</p>
-      </div>
-      <!-- X (Twitter) -->
-      <div class="creator-card" onclick="window.open('https://x.com/itzzlx', '_blank')">
-        <div class="social-logo">
-          <svg viewBox="0 0 24 24" fill="currentColor" style="color: #ffffff;">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-        </div>
-        <h3>X (Twitter)</h3>
-        <p class="text-subtle">@itzzlx</p>
+        <p class="text-subtle" style="margin-top: 1.5rem; font-size: 0.85rem;">Small creator, but dedicated audience.</p>
       </div>
     </div>
-  </section>
+
+    <div class="container">
+      <h2>Why <span class="text-accent">Partner</span> With Me</h2>
+      <div class="bento-grid">
+        <div class="bento-card">
+          <div class="icon">🎯</div>
+          <h3>Engaged Audience</h3>
+          <p class="text-subtle">Real people, real engagement</p>
+        </div>
+        <div class="bento-card">
+          <div class="icon">⚡</div>
+          <h3>Daily Content</h3>
+          <p class="text-subtle">Consistent reach and visibility</p>
+        </div>
+        <div class="bento-card">
+          <div class="icon">💡</div>
+          <h3>Creative Freedom</h3>
+          <p class="text-subtle">Authentic integrations that work</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONNECT PAGE -->
+  <div id="connect-page" class="page">
+    <div class="container">
+      <h2>Find Me <span class="text-accent">Online</span></h2>
+      <div class="social-grid">
+        <!-- YouTube -->
+        <div class="social-card" onclick="window.open('https://www.youtube.com/@billeshbhai', '_blank')">
+          <div class="social-logo">
+            <svg viewBox="0 0 24 24" fill="#FF0000">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.376.505A3.016 3.016 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.376-.505a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </div>
+          <h3>YouTube</h3>
+          <p class="text-subtle">@billeshbhai</p>
+        </div>
+        <!-- Instagram -->
+        <div class="social-card" onclick="window.open('https://www.instagram.com/billeshbhaiofficial/', '_blank')">
+          <div class="social-logo">
+            <svg viewBox="0 0 24 24" fill="#E4405F">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+          </div>
+          <h3>Instagram</h3>
+          <p class="text-subtle">@billeshbhaiofficial</p>
+        </div>
+        <!-- X (Twitter) -->
+        <div class="social-card" onclick="window.open('https://x.com/itzzlx', '_blank')">
+          <div class="social-logo">
+            <svg viewBox="0 0 24 24" fill="#ffffff">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </div>
+          <h3>X (Twitter)</h3>
+          <p class="text-subtle">@itzzlx</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
 <footer>
-  <p>Billesh Bhai — Creator Empire</p>
-  <p class="text-subtle" style="margin-top: 0.5rem;">Funny Shorts · Cat Videos · Memes · Business Culture</p>
+  <p>Billesh Bhai — Small Creator, Big Energy</p>
+  <p class="text-subtle" style="margin-top: 0.5rem;">Funny Shorts · Cat Videos · Memes · Real Journey</p>
 </footer>
 
-<!-- Three.js with Premium BMW Model -->
-<script type="importmap">
-  {
-    "imports": {
-      "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
-      "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
-    }
-  }
-</script>
-
-<script type="module">
-  import * as THREE from 'three';
-  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-  import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-
-  const canvas = document.getElementById('three-canvas');
-  if (canvas) {
-    const scene = new THREE.Scene();
-    scene.background = null;
-    scene.environment = null;
-    
-    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.5, 100);
-    camera.position.set(3, 1.5, 5);
-    camera.lookAt(0, 0.2, 0);
-    
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setClearColor(0x000000, 0);
-    
-    // Lighting for realistic BMW
-    const ambientLight = new THREE.AmbientLight(0x222222);
-    scene.add(ambientLight);
-    
-    const mainLight = new THREE.DirectionalLight(0xffffff, 1.5);
-    mainLight.position.set(3, 4, 2);
-    scene.add(mainLight);
-    
-    const fillLight = new THREE.PointLight(0x4466aa, 0.6);
-    fillLight.position.set(-2, 1.5, 3);
-    scene.add(fillLight);
-    
-    const rimLight = new THREE.PointLight(0xffaa66, 0.5);
-    rimLight.position.set(1, 2, -3);
-    scene.add(rimLight);
-    
-    const backLight = new THREE.PointLight(0x00aaff, 0.4);
-    backLight.position.set(0, 1, -4);
-    scene.add(backLight);
-    
-    // Ground reflection helper (subtle)
-    const gridHelper = new THREE.GridHelper(20, 20, 0x00e5ff, 0x224466);
-    gridHelper.position.y = -0.8;
-    gridHelper.material.transparent = true;
-    gridHelper.material.opacity = 0.12;
-    scene.add(gridHelper);
-    
-    // Simple reflective plane for shadow (invisible but catches reflections)
-    const planeMat = new THREE.MeshStandardMaterial({ color: 0x111122, roughness: 0.4, metalness: 0.7, transparent: true, opacity: 0.2 });
-    const groundPlane = new THREE.Mesh(new THREE.PlaneGeometry(8, 8), planeMat);
-    groundPlane.rotation.x = -Math.PI / 2;
-    groundPlane.position.y = -0.75;
-    scene.add(groundPlane);
-    
-    let carModel = null;
-    const loader = new GLTFLoader();
-    // High-quality BMW M4 Coupe model (external premium asset)
-    // Using a reliable, high-quality BMW GLTF from a CDN (Sketchfab standard asset)
-    const bmwUrl = 'https://threejs.org/examples/models/gltf/BMW.glb';
-    
-    loader.load(bmwUrl, 
-      (gltf) => {
-        carModel = gltf.scene;
-        carModel.scale.set(0.65, 0.65, 0.65);
-        carModel.position.set(0, -0.6, 0);
-        carModel.traverse((child) => {
-          if (child.isMesh) {
-            child.castShadow = true;
-            child.receiveShadow = false;
-            if (child.material) {
-              child.material.roughness = 0.25;
-              child.material.metalness = 0.85;
-              child.material.envMapIntensity = 1.2;
-            }
-          }
-        });
-        scene.add(carModel);
-      },
-      undefined,
-      (error) => {
-        console.error('BMW model load error, fallback to premium abstract shape:', error);
-        // Fallback: create a premium sports car shape using mesh combinations
-        const bodyGeo = new THREE.BoxGeometry(1.2, 0.4, 2.2);
-        const bodyMat = new THREE.MeshStandardMaterial({ color: 0x2244aa, metalness: 0.9, roughness: 0.2 });
-        const body = new THREE.Mesh(bodyGeo, bodyMat);
-        body.position.y = -0.2;
-        scene.add(body);
-        
-        const roofGeo = new THREE.CylinderGeometry(0.5, 0.6, 0.5, 16);
-        const roofMat = new THREE.MeshStandardMaterial({ color: 0x112233, metalness: 0.7 });
-        const roof = new THREE.Mesh(roofGeo, roofMat);
-        roof.position.y = 0.15;
-        scene.add(roof);
-        
-        const wheelMat = new THREE.MeshStandardMaterial({ color: 0x111111, metalness: 0.6, roughness: 0.4 });
-        const positions = [[-0.7, -0.35, 0.8], [0.7, -0.35, 0.8], [-0.7, -0.35, -0.8], [0.7, -0.35, -0.8]];
-        positions.forEach(pos => {
-          const wheelGeo = new THREE.CylinderGeometry(0.28, 0.28, 0.3, 24);
-          const wheel = new THREE.Mesh(wheelGeo, wheelMat);
-          wheel.rotation.z = Math.PI / 2;
-          wheel.position.set(pos[0], pos[1], pos[2]);
-          scene.add(wheel);
-        });
-        
-        const headlightMat = new THREE.MeshStandardMaterial({ color: 0xffaa66, emissive: 0xff4400, emissiveIntensity: 0.3 });
-        const leftLight = new THREE.Mesh(new THREE.SphereGeometry(0.12, 16, 16), headlightMat);
-        leftLight.position.set(-0.45, -0.05, 1.15);
-        const rightLight = new THREE.Mesh(new THREE.SphereGeometry(0.12, 16, 16), headlightMat);
-        rightLight.position.set(0.45, -0.05, 1.15);
-        scene.add(leftLight);
-        scene.add(rightLight);
-      }
-    );
-    
-    // Subtle floating particles (minimal, elegant)
-    const particleCount = 300;
-    const particleGeo = new THREE.BufferGeometry();
-    const positions = new Float32Array(particleCount * 3);
-    for (let i = 0; i < particleCount; i++) {
-      positions[i*3] = (Math.random() - 0.5) * 15;
-      positions[i*3+1] = (Math.random() - 0.5) * 6;
-      positions[i*3+2] = (Math.random() - 0.5) * 12 - 4;
-    }
-    particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-    const particleMat = new THREE.PointsMaterial({ color: 0x88aaff, size: 0.03, transparent: true, opacity: 0.25 });
-    const particles = new THREE.Points(particleGeo, particleMat);
-    scene.add(particles);
-    
-    let time = 0;
-    function animate() {
-      requestAnimationFrame(animate);
-      time += 0.006;
-      
-      if (carModel) {
-        carModel.rotation.y = Math.sin(time * 0.2) * 0.15;
-        carModel.position.y = -0.6 + Math.sin(time * 1.5) * 0.008;
-      }
-      
-      particles.rotation.y = time * 0.03;
-      particles.rotation.x = Math.sin(time * 0.1) * 0.02;
-      
-      // Smooth camera motion
-      camera.position.x += (Math.sin(time * 0.15) * 0.08 - camera.position.x) * 0.02;
-      camera.position.y += (1.2 + Math.sin(time * 0.25) * 0.05 - camera.position.y) * 0.02;
-      camera.lookAt(0, 0.1, 0);
-      
-      renderer.render(scene, camera);
-    }
-    animate();
-    
-    window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-  }
-</script>
-
-<!-- Scroll & Counter Animation + Reveal -->
+<!-- Simple Page Navigation Script -->
 <script>
-  // Scroll reveal observer
-  const revealElements = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
+  // Page navigation
+  const pages = {
+    home: document.getElementById('home-page'),
+    content: document.getElementById('content-page'),
+    business: document.getElementById('business-page'),
+    connect: document.getElementById('connect-page')
+  };
+
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const logoLink = document.querySelector('.logo');
+
+  function showPage(pageId) {
+    Object.keys(pages).forEach(key => {
+      pages[key].classList.remove('active-page');
+    });
+    pages[pageId].classList.add('active-page');
+    
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      if (linkPage === pageId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
       }
     });
-  }, { threshold: 0.15 });
-  revealElements.forEach(el => observer.observe(el));
-  
-  // Smooth anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const pageId = link.getAttribute('data-page');
+      showPage(pageId);
     });
   });
-  
-  // Animated stats counter
-  const statNumbers = document.querySelectorAll('.stat-number');
-  let animated = false;
-  
-  function animateStats() {
-    if (animated) return;
-    const statsSection = document.querySelector('.split-layout');
-    if (!statsSection) return;
-    const rect = statsSection.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100 && !animated) {
-      animated = true;
-      statNumbers.forEach(stat => {
-        const targetText = stat.getAttribute('data-target');
-        if (!targetText) return;
-        let targetNum = parseFloat(targetText);
-        let suffix = '';
-        if (stat.innerText.includes('M')) suffix = 'M';
-        else if (stat.innerText.includes('K')) suffix = 'K';
-        else suffix = '';
-        
-        let finalValue = targetNum;
-        let current = 0;
-        const increment = finalValue / 45;
-        const updateCounter = () => {
-          current += increment;
-          if (current < finalValue) {
-            if (suffix === 'M') stat.innerText = Math.floor(current) + 'M';
-            else if (suffix === 'K') stat.innerText = Math.floor(current) + 'K';
-            else stat.innerText = Math.floor(current);
-            requestAnimationFrame(updateCounter);
-          } else {
-            if (suffix === 'M') stat.innerText = finalValue + 'M';
-            else if (suffix === 'K') stat.innerText = finalValue + 'K';
-            else stat.innerText = finalValue;
-          }
-        };
-        updateCounter();
-      });
-    }
+
+  if (logoLink) {
+    logoLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      showPage('home');
+    });
   }
-  
-  window.addEventListener('scroll', animateStats);
-  window.addEventListener('load', animateStats);
-  
-  // Subtle parallax for hero
-  window.addEventListener('mousemove', (e) => {
-    const heroTitle = document.querySelector('h1');
-    if (!heroTitle) return;
-    const x = (e.clientX / window.innerWidth - 0.5) * 6;
-    const y = (e.clientY / window.innerHeight - 0.5) * 4;
-    heroTitle.style.transform = `translate(${x * 0.3}px, ${y * 0.2}px)`;
-  });
-  
-  // Navbar background opacity on scroll
+
+  // Update active state on scroll (simple)
   window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-      navbar.style.background = 'rgba(0, 0, 0, 0.85)';
-      navbar.style.backdropFilter = 'blur(20px)';
+      navbar.style.background = 'rgba(0, 0, 0, 0.95)';
     } else {
-      navbar.style.background = 'rgba(0, 0, 0, 0.72)';
+      navbar.style.background = 'rgba(0, 0, 0, 0.85)';
     }
   });
 </script>
